@@ -1,0 +1,243 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	width: 100%;
+	min-height: 100%;
+	/*overflow: hidden;*/
+}
+body{
+	background: url('../img/loto/roulette-background.png') no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	height: 100%;
+	min-height: 100vh;
+	/*overflow: hidden;*/
+}
+.roulette-page{
+	position: relative;
+	width: 100%;
+	height: inherit;
+	min-height: 100vh;
+	line-height: 1;
+	background-color: rgba(60, 72, 88, 0.6);
+	overflow: hidden;
+	padding: 0 20px;
+	padding-bottom: 40px;
+	overflow: hidden;
+	
+	
+	
+}
+h2.start-title{
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.44px;
+	padding-top: 6.5%;
+	text-transform: uppercase;
+	text-align: center;
+}
+#clock{
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 132px;
+	font-weight: 700;
+	letter-spacing: 2.64px;
+	display: flex;
+	width: 552px;
+	margin: 0 auto;
+	margin-top: 16px;
+
+}
+.roulette-description{
+	color: #ffffff;
+	font-family: "Roboto";
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 15px;
+
+}
+.roulette-description strong{
+
+	font-family: "Roboto - Bold";
+	font-weight: 700;
+}
+.roulette-description .system-info{
+	color: #ffffff;
+	font-family: Roboto;
+	text-decoration: underline;
+}
+.roulette-page .known-block{
+	width: 792px;
+	min-height: 246px;
+	box-shadow: 15px 15px 35px 4px rgba(0, 0, 0, 0.16);
+	border-radius: 10px;
+	background-color: #ffffff;
+	margin: 0 25px;
+}
+.main-block{
+	max-width: 1396px;
+	min-height: 392px;
+	box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+	background-color: rgba(60, 72, 88, 0.9);
+	padding: 0 46px;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 43px auto;
+	overflow: hidden;
+
+}
+
+
+
+
+
+.roulette-block{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 536px;
+	min-height: 241px;
+	border-radius: 10px;
+	border: 1px solid rgb(255, 255, 255);
+	margin: 90px 58px 60px 58px;
+	
+
+}
+.roulette-block h2.title{
+	
+	position: absolute;
+	top: -30px;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+	margin: 0;
+	padding: 18px 22px;
+	color: rgb(60, 72, 88);
+	font-family: Roboto;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.44px;
+
+
+}
+.roulette-block .btc-name{
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.44px;
+	text-transform: uppercase;
+	margin-right: 12px;
+}
+.roulette-block .roulette-container{
+	position: relative; 
+	width: 164px; 
+	height: 126px; 
+	overflow: hidden;
+	visibility: hidden;
+	
+}
+.roulette-container .border-win{
+	position: absolute;
+	width: 100%; 
+	height: 56px;
+	border-radius: 10px;
+	border: 1px solid #cecece;
+	top: 50%;
+	margin-top: -29px;
+	left: 0;
+	box-shadow: 0 0 500px 500px rgba(60, 72, 88, 0.3); 
+	
+}
+.roulette-container .main-roulette-array{
+	width: 164px; 
+	height: auto;  
+	overflow:hidden;
+	position: relative;
+}
+.main-roulette-array .roulette-item{
+	color: #ffffff;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.36px;
+	text-align: center;
+	padding: 12px;
+}
+.roulette-block .run-roulette{
+	margin-top: 22px;
+	margin-bottom: 7px;
+}
+
+
+
+.winner-image{
+	margin-left: 30px; 
+	width: 0;
+	height: 0;
+	transition: all 0.5s ease;
+
+}
+.winner-image.show-img{
+	width: 108px;
+	height: auto;
+}	
+#popup-winner .roulette-container{
+	width: 292px;
+	height: 152px;
+}
+#popup-winner .main-roulette-array{
+	width: 292px;
+}
+#popup-winner .roulette-item{
+	text-align: left;
+	padding: 17px;
+	padding-left: 30px;
+	font-size: 18px;
+	padding-right: 5px;
+	font-size: 16px
+}
+.roulette-item .line{
+	position: relative;
+	width: 1px;
+	margin: 0 20px;
+}
+.roulette-item .line:before{
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #ffffff;
+	width: 1px;
+	height: 36px;
+	top: -8px;
+	left: 0;
+}
+
+.sponsor{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.36px;
+	margin-bottom: 24px;
+}
+.sponsor-link{
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.36px;
+	text-decoration: underline;
+}
