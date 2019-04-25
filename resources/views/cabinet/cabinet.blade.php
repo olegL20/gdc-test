@@ -4,9 +4,10 @@
     <section class="light-gradient  main-section">
         <div class="container">
             <div class="main-block">
-    @if($link)
-        Your referral link is {{route('referral', ['code' => $link] )}}
-    @endif
+
+                @if($link)
+                    Your referral link is {{route('referral', ['code' => $link] )}}
+                @endif
             </div>
         </div>
     </section>
