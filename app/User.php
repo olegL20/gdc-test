@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Pdazcom\Referrals\Traits\ReferralsMember;
+use TMyers\StripeBilling\Billable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Billable, ReferralsMember;
 
     /**
      * The attributes that are mass assignable.
@@ -49,6 +51,11 @@ class User extends Authenticatable
         }
 
         return false;
+    }
+
+    public function isVerified(): bool
+    {
+        return (bool)$this->verified;
     }
 
     public function cashback()

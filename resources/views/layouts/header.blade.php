@@ -53,17 +53,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contacts')}}">КОНТАКТЫ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('cabinet')}}">ЛИЧНЫЙ КАБИНЕТ</a>
-                    </li>
-                    @if(auth()->user()->isAdmin())
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin')}}">Админ Панель</a>
-                    </li>
+                    @if (!auth()->guest())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('cabinet')}}">ЛИЧНЫЙ КАБИНЕТ</a>
+                        </li>
+                        @if(auth()->user() && auth()->user()->isAdmin())
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('admin')}}">Админ Панель</a>
+                            </li>
+                        @endif
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('logout')}}">Выйти</a>
+                        </li>
                     @endif
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('logout')}}">Выйти</a>
-                    </li>
                 </ul>
 
                 <select name="" id="" class="change-language">

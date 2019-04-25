@@ -161,7 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
+        Pdazcom\Referrals\Providers\ReferralsServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -189,7 +190,7 @@ return [
     */
 
     'aliases' => [
-
+        'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,

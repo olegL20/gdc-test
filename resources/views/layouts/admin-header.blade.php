@@ -78,3 +78,7 @@
 
     </div>
 </header>
+<section class="light-gradient clip-section"></section>
+<section class="light-gradient  main-section">
+    <div class="container">
+        <div class="main-block">

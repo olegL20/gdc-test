@@ -1,0 +1,1 @@
+Verify your account <a href="{{route('admin.start_verify_user', ['user' => $user])}}">here</a>
