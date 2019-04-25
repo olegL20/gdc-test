@@ -12,10 +12,12 @@
                         выдаче займов и многоуровневого маркетинга.</p>
                     <p>Наша цель — глобальное доминирование на рынке.</p>
                 </div>
-                <div class="users-block">
-                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endif
                 <a href="{{route('loto')}}" class="banner">
                     <div class="banner-text">
                         <p class="title">SIMPLE TITLE TEXT WILL BE HERE!</p>

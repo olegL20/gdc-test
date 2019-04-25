@@ -27,3 +27,7 @@ Route::get('/documents', 'HomeController@documents')->name('docs');
 Route::get('/contacts', 'HomeController@contacts')->name('contacts');
 Route::get('/loto', 'HomeController@loto')->name('loto');
 Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator');
+
+
+Route::get('/cabinet', 'CabinetController@index')->middleware('auth')->name('cabinet');
+Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');

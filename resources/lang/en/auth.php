@@ -13,7 +13,18 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+    'failed' => 'Ошибка логина или пароля',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'Login' => 'Логин',
+    'Skype' => 'Skype',
+    'Perf_money' => 'PerfectMoney',
+    'Payeer' => 'PAYEER.com',
+    'email' => 'Email',
+    'Password' => 'Придумайте Пароль',
+    'ConfirmPassword' => ' Пароль повторно',
+    'LoginPassword' => ' Пароль',
+    'Remember' => 'Запомнить меня',
+    'signin' => 'Войти',
+    'forgot' => 'Забыли пароль?',
+    '18' => 'Я подтверждаю, что мне есть 18+'
 ];
