@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae89905b35ec36ec273fd2f814aceee8",
+    "content-hash": "6b2dcc65eaffb217a79fc33d401aece4",
     "packages": [
         {
             "name": "cartalyst/collections",
@@ -3657,6 +3657,48 @@
                 "psr-7"
             ],
             "time": "2018-09-05T19:29:37+00:00"
+        },
+        {
+            "name": "zvook/php-skrill-quick-checkout",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zvook/php-skrill-quick-checkout.git",
+                "reference": "05fbdc60223fec8e452c202344f26b11bd39b1a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zvook/php-skrill-quick-checkout/zipball/05fbdc60223fec8e452c202344f26b11bd39b1a9",
+                "reference": "05fbdc60223fec8e452c202344f26b11bd39b1a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "zvook\\Skrill\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Klyukin Dmitry",
+                    "email": "zvookbox@gmail.com"
+                }
+            ],
+            "description": "PHP5 package for Skrill QuickCheckout interface",
+            "homepage": "https://github.com/zvook/php-skrill-quick-checkout",
+            "keywords": [
+                "api",
+                "php",
+                "skrill"
+            ],
+            "time": "2016-06-26T14:54:13+00:00"
         }
     ],
     "packages-dev": [

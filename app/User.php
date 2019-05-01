@@ -62,4 +62,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cashback::class);
     }
+
+    public function verification(bool $bool)
+    {
+        $this->verified = $bool;
+        $this->save();
+    }
 }

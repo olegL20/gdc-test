@@ -14,7 +14,8 @@
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "pdazcom/laravel-referrals": "^0.2.1",
-        "tmyers273/laravel-stripe-billing": "^1.5"
+        "tmyers273/laravel-stripe-billing": "^1.5",
+        "zvook/php-skrill-quick-checkout": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

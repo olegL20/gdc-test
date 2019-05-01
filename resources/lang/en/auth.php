@@ -15,10 +15,9 @@ return [
 
     'failed' => 'Ошибка логина или пароля',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'Login' => 'Логин',
-    'Skype' => 'Skype',
-    'Perf_money' => 'PerfectMoney',
-    'Payeer' => 'PAYEER.com',
+    'name' => 'Имя',
+    'surname' => 'Фамилия',
+    'address' => 'Адрес',
     'email' => 'Email',
     'Password' => 'Придумайте Пароль',
     'ConfirmPassword' => ' Пароль повторно',
@@ -26,5 +25,6 @@ return [
     'Remember' => 'Запомнить меня',
     'signin' => 'Войти',
     'forgot' => 'Забыли пароль?',
-    '18' => 'Я подтверждаю, что мне есть 18+'
+    '18' => 'Я соглашаюсь с условиями соглашения',
+    'Register' => 'Зарегистрироваться',
 ];

@@ -1,1 +1,1 @@
-Verify your account <a href="{{route('admin.start_verify_user', ['user' => $user])}}">here</a>
+Your account is verified. Please visit your personal cabinet <a href="{{route('cabinet')}}">here</a>

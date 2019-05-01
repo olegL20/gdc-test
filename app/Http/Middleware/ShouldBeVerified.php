@@ -15,7 +15,7 @@ class ShouldBeVerified
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user()->isVerified()) {
+        if (!$request->user()->isVerified()) {
             return redirect('/');
         }
 

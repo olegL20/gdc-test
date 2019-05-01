@@ -32,19 +32,10 @@ class AdminController extends Controller
         return back();
     }
 
-    public function sendVerifyLink(User $user)
+    public function sendVerifyLink(User $user, Request $request)
     {
+        $user->verification(!$request->has('decline') || $request->has('verify'));
         Mail::to($user)->send(new UserVerify($user));
         return back();
-    }
-
-    public function startVerify(User $user)
-    {
-        $stripe = new Stripe();
-
-
-        return view('admin.users.stripe-payment')
-            ->with('user', $user)
-            ->with('customer', $customer);
     }
 }

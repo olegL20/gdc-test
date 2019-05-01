@@ -12,53 +12,40 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="login" class="col-md-4 col-form-label text-md-right">{{ __('auth.Login') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('auth.name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="login" type="text" class="form-control{{ $errors->has('login') ? ' is-invalid' : '' }}" name="login" value="{{ old('login') }}" required autofocus>
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('login'))
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('login') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="skype" class="col-md-4 col-form-label text-md-right">{{ __('auth.Skype') }}</label>
+                            <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('auth.surname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="skype" type="text" class="form-control{{ $errors->has('skype') ? ' is-invalid' : '' }}" name="skype" value="{{ old('skype') }}" required autofocus>
+                                <input id="surname" type="text" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname" value="{{ old('surname') }}" required autofocus>
 
-                                @if ($errors->has('skype'))
+                                @if ($errors->has('surname'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('skype') }}</strong>
+                                        <strong>{{ $errors->first('surname') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="perf_money" class="col-md-4 col-form-label text-md-right">{{ __('auth.Perf_money') }}</label>
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('auth.address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="perf_money" type="text" class="form-control{{ $errors->has('perf_money') ? ' is-invalid' : '' }}" name="perf_money" value="{{ old('perf_money') }}" required autofocus>
+                                <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required autofocus>
 
-                                @if ($errors->has('perf_money'))
+                                @if ($errors->has('address'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('perf_money') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="payeer" class="col-md-4 col-form-label text-md-right">{{ __('auth.Payeer') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="payeer" type="text" class="form-control{{ $errors->has('payeer') ? ' is-invalid' : '' }}" name="payeer" value="{{ old('payeer') }}" required autofocus>
-
-                                @if ($errors->has('payeer'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('payeer') }}</strong>
+                                        <strong>{{ $errors->first('address') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -116,7 +103,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('auth.Register') }}
                                 </button>
                             </div>
                         </div>

@@ -27,6 +27,7 @@ Route::get('/partners', 'HomeController@partners')->name('partners');
 Route::get('/news', 'HomeController@news')->name('news');
 Route::get('/reviews', 'HomeController@reviews')->name('reviews');
 Route::get('/documents', 'HomeController@documents')->name('docs');
+Route::get('/documents-interactive-investor', 'HomeController@documentII')->name('docsII');
 Route::get('/contacts', 'HomeController@contacts')->name('contacts');
 Route::get('/loto', 'HomeController@loto')->name('loto');
 Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator');
@@ -35,9 +36,12 @@ Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator
 Route::get('/cabinet', 'CabinetController@index')->middleware(['auth','verified'])->name('cabinet');
 Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');
 Route::get('/admin/users', 'AdminController@users')->middleware(['auth', 'admin'])->name('admin.users');
-Route::get('/admin/users/{user}/sent-verification', 'AdminController@sendVerifyLink')->name('admin.verification_sent');
-Route::get('/admin/users/{user}/verify', 'AdminController@verify')->middleware(['auth'])->name('admin.verify_user');
-Route::get('/admin/users/{user}/start-verification', 'AdminController@startVerify')->middleware(['auth'])->name('admin.start_verify_user');
+Route::get('/admin/users/{user}/verify', 'AdminController@sendVerifyLink')->name('admin.verification_sent');
 Route::get('/admin/users/{user}/set-cashback', 'AdminController@cashback')->middleware(['auth', 'admin'])->name('admin.cashback');
 
 Route::get('/referral/{code}')->name('referral');
+Route::get('/{user}/balance', 'CabinetController@balance')->name('balance');
+Route::any('/skrill-callback', 'CabinetController@callbackSkrill')->name('skrill-callback');
+Route::get('/payment-succeed', function () {
+    return view('pages.success');
+})->name('successful-payment');

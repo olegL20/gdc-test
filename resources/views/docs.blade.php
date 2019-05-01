@@ -163,9 +163,8 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title royal">
-                                <img src="img/royal.svg" alt="" class="title-img">
-                                <div class="title-text">Royal Standart
-                                    Group
+                                <img src="img/ii.jpg" alt="" class="title-img">
+                                <div class="title-text">Interactive Investor
                                 </div>
                             </div>
                             <div class="item-description">
@@ -173,7 +172,7 @@
 
 
                             </div>
-                            <a href="document_base2.html" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="{{route('docsII')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
 

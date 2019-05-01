@@ -35,6 +35,10 @@ class HomeController extends Controller
     {
         return view('docs');
     }
+    public function documentII()
+    {
+        return view('docs2');
+    }
 
     public function news()
     {
