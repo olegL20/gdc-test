@@ -1018,7 +1018,29 @@ body {
       font-size: 16px;
       font-weight: 400;
       text-align: center; } }
-
+@media (min-width: 1580px) and (max-width: 1919px) {
+  .offers .offers-list {
+      display: grid;
+      grid-template-columns: repeat(5, 240px);
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      grid-gap: 10px;
+      margin-top: 20px;
+      padding-left: 0;
+      padding-bottom: 60px;
+      overflow: visible; }
+      .offers .offers-list .offers-item {
+        width: 240px;
+      }
+      .offers .offers-list .offers-item .subtitle-description {
+          margin: 15px 0 34px 0;
+          color: #131313;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-weight: 400; }
+}
 @media (max-width: 1199px) {
   h2.section-title {
     font-size: 28px;

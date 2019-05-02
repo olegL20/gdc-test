@@ -1,6 +1,16 @@
 @extends('layouts.app')
 @section('content')
+    <section class="heading">
+        <div class="container">
+            <div class="heading-text">
+                <h1 class="heading-title">
+                    РАССЧИТАЙТЕ СВОЮ ПРИБЫЛЬ
+                </h1>
+                
+            </div>
 
+        </div>
+    </section>
     <section class="light-gradient clip-section"></section>
 
     <section class="light-gradient  main-section">
@@ -93,20 +103,15 @@
                                 <div id="collapse1" class="collapse show" aria-labelledby="headingTwo"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam.</p>
+                                        <p class="description">Это базовый тариф. Он позволяет сделать первые шаги в инвестировании своих средств. Вне зависимости от знаний фондового рынка и правил трейдинга, Вы можете заработать на этом, так как Ваши деньги будут реинвестированы в брокерскую компанию Interactive Investor. </p>
+                                        <p class="description">Interactive investor входит в десятку лучших брокерских фирм Соединенного королевства.  GDCinvest заключила договор с Interactive Investor, дающий гарантию заработка для наших инвесторов. Гибкая финансовая политика компании позволяет сделать минимальные инвестиции. </p>
+                                        <p class="description">По истечению срока тарифа прибыль составит 70% к телу депозита</p>
                                         <ul class="parameter-list">
-                                            <li class="parameter-item"><b class="title">Депозит:</b> От 7000р до 70000р.
-                                            </li>
-                                            <li class="parameter-item"><b class="title">Ставка:</b> 0.6% в день</li>
+                                            <li class="parameter-item"><b class="title">Депозит:</b> От 7000р до 70000р.</li>
+                                            <li class="parameter-item"><b class="title">Ставка:</b> 0.7% в день</li>
                                             <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
                                             <li class="parameter-item"><b class="title">Рефовод получает 5%</b></li>
-                                            <li class="parameter-item"><b class="title">Распределённые инвестиции</b>
-                                            </li>
+                                            <li class="parameter-item"><b class="title">Распределённые инвестиции</b></li>
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
@@ -127,21 +132,14 @@
                                 <div id="collapse2" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam.</p>
+                                        <p class="description">При выборе данного тарифа компания реинвистирует Ваши деньги в микрофинансовый сектор экономики КНР. Это один из самых выгодных вариантов инвестирования (рост количества оформленных микрозаймов вырос на 64% по сравнению с 2017г)</p>
+                                        <p class="description">По истечению срока тарифа прибыль составит 100% к телу депозита</p>
                                         <ul class="parameter-list">
-                                            <li class="parameter-item"><b class="title">Депозит:</b> От 100000р до
-                                                250000р.
-                                            </li>
+                                            <li class="parameter-item"><b class="title">Депозит:</b> От 100000р до 250000р.</li>
                                             <li class="parameter-item"><b class="title">Ставка:</b> 1% в день</li>
                                             <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
                                             <li class="parameter-item"><b class="title">Рефовод получает 10%</b></li>
-                                            <li class="parameter-item"><b class="title">Инвестиции в Частные
-                                                    микрозаймы</b></li>
+                                            <li class="parameter-item"><b class="title">Инвестиции в Частные микрозаймы</b></li>
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
@@ -162,16 +160,10 @@
                                 <div id="collapse3" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam.</p>
+                                        <p class="description">При выборе данного тарифа компания реинвистирует Ваши деньги в кредитование бизнеса и юридических лиц. Тариф был разработан в сотрудничестве с Industrial and Commercial Bank of China. Это крупнейший китайский коммерческий банк.</p>
+                                        <p class="description">По истечению срока тарифа прибыль составит 150% к телу депозита</p>
                                         <ul class="parameter-list">
-                                            <li class="parameter-item"><b class="title">Депозит:</b> От 200000р до
-                                                300000р.
-                                            </li>
+                                            <li class="parameter-item"><b class="title">Депозит:</b> От 200000р до 300000р.</li>
                                             <li class="parameter-item"><b class="title">Ставка:</b> 15%</li>
                                             <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
                                             <li class="parameter-item"><b class="title">Рефовод получает 10%</b></li>
@@ -196,21 +188,14 @@
                                 <div id="collapse4" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam.</p>
+                                       <p class="description">При выборе данного тарифа Ваши деньги будут реинвестированы в займы под залог имущества.</p>
+                                        <p class="description">По истечению срока тарифа прибыль составит 170% к телу депозита</p>
                                         <ul class="parameter-list">
-                                            <li class="parameter-item"><b class="title">Депозит:</b> От 200000р до
-                                                300000р.
-                                            </li>
+                                            <li class="parameter-item"><b class="title">Депозит:</b> От 200000р до 300000р.</li>
                                             <li class="parameter-item"><b class="title">Ставка:</b> 17%</li>
                                             <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
                                             <li class="parameter-item"><b class="title">Рефовод получает 12%</b></li>
-                                            <li class="parameter-item"><b class="title">Инвестиции в кредитование под
-                                                    залог</b></li>
+                                            <li class="parameter-item"><b class="title">Инвестиции в кредитование под залог</b></li>
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
@@ -231,20 +216,17 @@
                                 <div id="collapse5" class="collapse" aria-labelledby="headingTwo"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam.</p>
+                                        <p class="description">При выборе данного тарифа компания реинвистирует Ваши деньги в блокчейн технологии, BitcoinATM,  и трейдинг на криптобиржах. Тариф разработан в сотрудничестве с компанией General Bytes. </p>
+                                        <p class="description">General Bytes – это компания по производству оборудования и программного обеспечения, связанного с биткоином, блокчейном и технологиями open source.</p>
+                                        <p class="description">Заключенный между нами договор, позволяет равномерно распределить инвестиции между трейдингом и вложениями в оборудования General bytes. </p>
+                                        <p class="description">По истечению срока тарифа прибыль составит 200% к телу депозита</p>
+
                                         <ul class="parameter-list">
                                             <li class="parameter-item"><b class="title">Депозит:</b> 1 BTC</li>
                                             <li class="parameter-item"><b class="title">Ставка:</b> 2%</li>
                                             <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
-                                            <li class="parameter-item"><b class="title">Рефовод получает 0,5 ВТС на
-                                                    кабинет</b></li>
-                                            <li class="parameter-item"><b class="title">Инвестиции в майнинг криптовалют
-                                                    и трейдинг на криптобиржах</b></li>
+                                            <li class="parameter-item"><b class="title">Рефовод получает 0,5 ВТС на кабинет</b></li>
+                                            <li class="parameter-item"><b class="title">Инвестиции в майнинг криптовалют и трейдинг на криптобиржах</b></li>
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
@@ -265,24 +247,42 @@
                                 <div id="collapse6" class="collapse" aria-labelledby="heading6"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                                            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                                            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                            diam.</p>
+                                        <p class="description">При выборе данного тарифа компания реинвестирует Ваши деньги в строительный сектор экономики КНР. Строительные займы считаются самыми крупными в сфере финансирования и кредитования.  Данный тариф разработан в сотрудничестве с China Communications Construction. Это бесспорный лидер на рынке строительства КНР и один из мировых лидеров в области проектирования и строительства портов.</p>
+                                        <p class="description">По истечению срока тарифа прибыль составит 240% к телу депозита</p>
+
                                         <ul class="parameter-list">
                                             <li class="parameter-item"><b class="title">Депозит:</b> от 300 000 р.</li>
                                             <li class="parameter-item"><b class="title">Ставка:</b> 2%</li>
                                             <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
                                             <li class="parameter-item"><b class="title">Рефовод получает 15%</b></li>
-                                            <li class="parameter-item"><b class="title">Инвестиции в Строительство</b>
-                                            </li>
+                                            <li class="parameter-item"><b class="title">Инвестиции в Строительство</b></li>
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
                                         <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                               
+                                 
+                                <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                                    ТАРИФ «Партнер»
+                                </button>
+                                 
+                                
+                                <div id="collapse17" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p class="description">Это эксклюзивный тариф, который не требует от Вас абсолютно НИКАКИХ вложений, и позволяет заработать на сотрудничестве с GDCinvest. При привлечении нового инвестора для сотрудничества с нами, реферальная программа позволяет заработать до 15% от привлеченных инвестиций. Так же партнер получает от компании бонусные 100$.</p>
+                                        <p class="description">Благодаря успешному анализу азиатского рынка компания GDCinvestсмогла предложить выгодные условия, как инвесторам, так и заемщикам. Мы заключили договора с компаниями, занимающими лидирующие позиции в ключевых отраслях экономики КНР. Такой подход позволяет нам предложить инвесторам различные инструменты заработка и возможность реинвестирования финансов в различные сферы экономики. Так же все инвестиции застрахованы China Pacific Insurance Company.</p>
+                                        <p class="description">Совокупность всех факторов делает компанию GDCinvestуникальной платформойу которой нет достойных аналогов в мире. Мы можем гарантировать заработок и делаем это</p>
+
+                                        
+                                        <div class="note">*Примечание касательно страховки</div>
+
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                                        
                                     </div>
                                 </div>
                             </div>
