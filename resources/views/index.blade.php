@@ -20,8 +20,9 @@
                 @endif
                 <a href="{{route('loto')}}" class="banner">
                     <div class="banner-text">
-                        <p class="title">SIMPLE TITLE TEXT WILL BE HERE!</p>
-                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <p class="title">Розыгрыш
+                            Выиграй до 2 BTC</p>
+                        <p class="description">sponsored by General bytes</p>
                     </div>
                     <div class="banner-arrow-block">
                         <img src="img/arrow-banner.png" alt="">

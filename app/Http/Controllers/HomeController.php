@@ -35,9 +35,25 @@ class HomeController extends Controller
     {
         return view('docs');
     }
+
     public function documentII()
     {
         return view('docs2');
+    }
+
+    public function documentCCCL()
+    {
+        return view('document_cccl');
+    }
+
+    public function documentCPI()
+    {
+        return view('document_cpi');
+    }
+
+    public function documentGBSRO()
+    {
+        return view('document_gbsro');
     }
 
     public function news()
