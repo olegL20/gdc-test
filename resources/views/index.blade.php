@@ -42,7 +42,7 @@
                 <li class="offers-item">
                     <h3 class="item-title">СТАРТ</h3>
                     <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                    <p class="subtitle-description">0.6% В ДЕНЬ</p>
+                    <p class="subtitle-description">0.7% В ДЕНЬ</p>
                     <h4 class="item-subtitle">ПЕРИОД</h4>
                     <p class="subtitle-description">100 ДНЕЙ</p>
                     <h4 class="item-subtitle">СУММА</h4>
