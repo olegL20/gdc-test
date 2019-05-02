@@ -133,7 +133,7 @@
                                     является вполне привычным делом. </p>
 
                             </div>
-                            <a href="document_base.html" class="document-base">ДОКУМЕНТАЛЬНАЯ БАЗА</a>
+                            <a href="{{route('docs')}}" class="document-base">ДОКУМЕНТАЛЬНАЯ БАЗА</a>
 
                         </div>
                         <div class="col-xl-6 content-item image-block">

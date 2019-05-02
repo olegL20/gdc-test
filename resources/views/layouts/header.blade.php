@@ -1,3 +1,6 @@
+@php
+@endphp
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,35 +34,42 @@
             <div class="collapse navbar-collapse" id="mainMenu">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link active-link" href="/">ГЛАВНАЯ </a>
+                        <a class="nav-link @if (request()->route()->getName() === 'home') active-link @endif" href="/">ГЛАВНАЯ </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('about')}}">О НАС</a></li>
+                        <a class="nav-link @if (request()->route()->getName() === 'about') active-link @endif" href="{{route('about')}}">О НАС</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('faq')}}">FAQ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'faq') active-link @endif" href="{{route('faq')}}">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('partners')}}">ПАРТНЕРАМ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'partners') active-link @endif" href="{{route('partners')}}">ПАРТНЕРАМ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('news')}}">НОВОСТИ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('reviews')}}">ОТЗЫВЫ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('docs')}}">ДОКУМЕНТАЦИЯ</a>
+                        <a class="nav-link @if (
+                        request()->route()->getName() === 'docs' ||
+                        request()->route()->getName() === 'docsII' ||
+                        request()->route()->getName() === 'docsCCCL' ||
+                        request()->route()->getName() === 'docsCPI' ||
+                        request()->route()->getName() === 'docsGBSRO')
+
+                        ) active-link @endif" href="{{route('docs')}}">ДОКУМЕНТАЦИЯ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('contacts')}}">КОНТАКТЫ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'contacts') active-link @endif" href="{{route('contacts')}}">КОНТАКТЫ</a>
                     </li>
                     @if (!auth()->guest())
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('cabinet')}}">ЛИЧНЫЙ КАБИНЕТ</a>
+                            <a class="nav-link @if (request()->route()->getName() === 'cabinet') active-link @endif" href="{{route('cabinet')}}">ЛИЧНЫЙ КАБИНЕТ</a>
                         </li>
                         @if(auth()->user() && auth()->user()->isAdmin())
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('admin')}}">Админ Панель</a>
+                                <a class="nav-link @if (request()->route()->getName() === 'admin') active-link @endif" href="{{route('admin')}}">Админ Панель</a>
                             </li>
                         @endif
                         <li class="nav-item">
@@ -80,23 +90,4 @@
     </div>
 </header>
 
-{{--<section class="heading">--}}
-{{--    <div class="container">--}}
-{{--        <div class="heading-text">--}}
-{{--            <h1 class="heading-title">--}}
-{{--                ДОКУМЕНТАЛЬНАЯ БАЗА--}}
-{{--            </h1>--}}
-{{--            <div class="col-12 col-xl-10 heading-description">--}}
-{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut--}}
-{{--                    labore et dolore magna aliquyam erat, sed diam voluptua.</p>--}}
 
-{{--            </div>--}}
-{{--            @if (auth()->guest())--}}
-{{--                <div class="users-block">--}}
-{{--                    <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>--}}
-{{--                    <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>--}}
-{{--                </div>--}}
-{{--            @endif--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}

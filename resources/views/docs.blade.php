@@ -6,7 +6,7 @@
                 <h1 class="heading-title">
                     ДОКУМЕНТАЛЬНАЯ БАЗА
                 </h1>
-                
+
                 <div class="users-block">
                     <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
                     <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
@@ -15,6 +15,7 @@
 
         </div>
     </section>
+
     <section class="light-gradient clip-section"></section>
     <section class="light-gradient  main-section">
         <div class="container">
@@ -49,8 +50,8 @@
 
 
                             </div>
-                            <a href="https://beta.companieshouse.gov.uk/company/11660684" class="item-check"><i
-                                        class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://beta.companieshouse.gov.uk/company/11660684"
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -64,8 +65,8 @@
 
 
                             </div>
-                            <a href="https://beta.companieshouse.gov.uk/company/SC612725" class="item-check"><i
-                                        class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://beta.companieshouse.gov.uk/company/SC612725"
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -80,8 +81,8 @@
 
 
                             </div>
-                            <a href="https://beta.companieshouse.gov.uk/company/11661561" class="item-check"><i
-                                        class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://beta.companieshouse.gov.uk/company/11661561"
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -96,8 +97,8 @@
 
 
                             </div>
-                            <a href="https://beta.companieshouse.gov.uk/company/NI656848" class="item-check"><i
-                                        class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://beta.companieshouse.gov.uk/company/NI656848"
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -112,7 +113,7 @@
 
                             </div>
                             <a href="https://connectonline.asic.gov.au/RegistrySearch/faces/landing/SearchRegisters.jspx?_adf.ctrl-state=fsi7zufvn_18"
-                               class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -126,8 +127,8 @@
 
 
                             </div>
-                            <a href="https://www.ic.gc.ca/app/ccc/srch/" class="item-check"><i
-                                        class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://www.ic.gc.ca/app/ccc/srch/"
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -143,8 +144,8 @@
 
 
                             </div>
-                            <a href="https://companies-register.companiesoffice.govt.nz/" class="item-check"><i
-                                        class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://companies-register.companiesoffice.govt.nz/"
+                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -177,7 +178,7 @@
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
-                            <div class="item-title royal">
+                            <div class="item-title ">
                                 <img src="img/ii.jpg" alt="" class="title-img">
                                 <div class="title-text">Interactive Investor
                                 </div>
@@ -190,8 +191,50 @@
                             <a href="{{route('docsII')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="img/cpi.png" alt="" class="title-img">
+                                <div class="title-text">China Pacific Insurance</div>
+                            </div>
+                            <div class="item-description">
+                                <p>Insurance policy #18613</p>
 
+
+                            </div>
+                            <a href="{{route('docsCPI')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="img/cccl.png" alt="" class="title-img">
+                                <div class="title-text">China Communications Construction Ltd</div>
+                            </div>
+                            <div class="item-description">
+                                <p>Договор N 124</p>
+
+
+                            </div>
+                            <a href="{{route('docsCCCL')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="img/gbsro.png" alt="" class="title-img">
+                                <div class="title-text">General Bytes S.R.O</div>
+                            </div>
+                            <div class="item-description">
+                                <p>Договор №4182</p>
+
+
+                            </div>
+                            <a href="{{route('docsGBSRO')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
                 </ul>
+
 
             </div>
         </div>
@@ -209,5 +252,4 @@
 
         </div>
     </section>
-
 @endsection
