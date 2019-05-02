@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>GDC Invest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-xxl.css')}}">
@@ -80,23 +80,23 @@
     </div>
 </header>
 
-<section class="heading">
-    <div class="container">
-        <div class="heading-text">
-            <h1 class="heading-title">
-                ДОКУМЕНТАЛЬНАЯ БАЗА
-            </h1>
-            <div class="col-12 col-xl-10 heading-description">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+{{--<section class="heading">--}}
+{{--    <div class="container">--}}
+{{--        <div class="heading-text">--}}
+{{--            <h1 class="heading-title">--}}
+{{--                ДОКУМЕНТАЛЬНАЯ БАЗА--}}
+{{--            </h1>--}}
+{{--            <div class="col-12 col-xl-10 heading-description">--}}
+{{--                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut--}}
+{{--                    labore et dolore magna aliquyam erat, sed diam voluptua.</p>--}}
 
-            </div>
-            @if (auth()->guest())
-                <div class="users-block">
-                    <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
-            @endif
-        </div>
-    </div>
-</section>
+{{--            </div>--}}
+{{--            @if (auth()->guest())--}}
+{{--                <div class="users-block">--}}
+{{--                    <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>--}}
+{{--                    <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>--}}
+{{--                </div>--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}

@@ -22,25 +22,25 @@
                                 <div class="currency-group">
                                     <div class="currency-item">
                                         <input type="radio" name="currency-value" id="cur-1"><label for="cur-1"
-                                                                                                    class="currency-title">Рубль</label>
+                                            class="currency-title">Рубль</label>
                                     </div>
                                     <div class="currency-item">
                                         <input type="radio" name="currency-value" id="cur-2"><label for="cur-2"
-                                                                                                    class="currency-title">Евро</label>
+                                            class="currency-title">Евро</label>
                                     </div>
                                     <div class="currency-item">
                                         <input type="radio" name="currency-value" id="cur-3"><label for="cur-3"
-                                                                                                    class="currency-title">Доллар</label>
+                                            class="currency-title">Доллар</label>
                                     </div>
                                 </div>
                                 <div class="currency-group">
                                     <div class="currency-item">
                                         <input type="radio" name="currency-value" id="cur-4"><label for="cur-4"
-                                                                                                    class="currency-title">Тенге</label>
+                                            class="currency-title">Тенге</label>
                                     </div>
                                     <div class="currency-item">
                                         <input type="radio" name="currency-value" id="cur-5"><label for="cur-5"
-                                                                                                    class="currency-title">Биткоин</label>
+                                            class="currency-title">Биткоин</label>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                            <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
                         </div>
 
                     </div>
@@ -85,13 +85,13 @@
 
 
                                 <button class="btn-collapse" data-toggle="collapse" data-target="#collapse1"
-                                        aria-expanded="false" aria-controls="collapse1">
+                                    aria-expanded="false" aria-controls="collapse1">
                                     ТАРИФ «Старт»
                                 </button>
 
 
                                 <div id="collapse1" class="collapse show" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -110,7 +110,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -119,13 +119,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse2"
-                                        aria-expanded="false" aria-controls="collapse2">
+                                    aria-expanded="false" aria-controls="collapse2">
                                     ТАРИФ «Деньги в квадрате»
                                 </button>
 
 
                                 <div id="collapse2" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -145,7 +145,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -154,13 +154,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse3"
-                                        aria-expanded="false" aria-controls="collapse3">
+                                    aria-expanded="false" aria-controls="collapse3">
                                     ТАРИФ «На пол пути к миллиону»
                                 </button>
 
 
                                 <div id="collapse3" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -179,7 +179,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -188,13 +188,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse4"
-                                        aria-expanded="false" aria-controls="collapse4">
+                                    aria-expanded="false" aria-controls="collapse4">
                                     ТАРИФ «Расчетливый инвестор»
                                 </button>
 
 
                                 <div id="collapse4" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -214,7 +214,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -223,13 +223,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse5"
-                                        aria-expanded="false" aria-controls="collapse5">
+                                    aria-expanded="false" aria-controls="collapse5">
                                     ТАРИФ «Крипто король»
                                 </button>
 
 
                                 <div id="collapse5" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -248,7 +248,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -257,13 +257,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse6"
-                                        aria-expanded="false" aria-controls="collapse6">
+                                    aria-expanded="false" aria-controls="collapse6">
                                     ТАРИФ «Миллионер за 100 дней»
                                 </button>
 
 
                                 <div id="collapse6" class="collapse" aria-labelledby="heading6"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -281,7 +281,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -297,13 +297,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse12"
-                                        aria-expanded="false" aria-controls="collapse12">
+                                    aria-expanded="false" aria-controls="collapse12">
                                     ТАРИФ «Деньги в квадрате»
                                 </button>
 
 
                                 <div id="collapse12" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -323,7 +323,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -332,13 +332,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse13"
-                                        aria-expanded="false" aria-controls="collapse13">
+                                    aria-expanded="false" aria-controls="collapse13">
                                     ТАРИФ «На пол пути к миллиону»
                                 </button>
 
 
                                 <div id="collapse13" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -357,7 +357,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -366,13 +366,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse14"
-                                        aria-expanded="false" aria-controls="collapse14">
+                                    aria-expanded="false" aria-controls="collapse14">
                                     ТАРИФ «Расчетливый инвестор»
                                 </button>
 
 
-                                <div id="collapse4" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                <div id="collapse14" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -392,7 +392,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -401,13 +401,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse15"
-                                        aria-expanded="false" aria-controls="collapse15">
+                                    aria-expanded="false" aria-controls="collapse15">
                                     ТАРИФ «Крипто король»
                                 </button>
 
 
                                 <div id="collapse15" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -426,7 +426,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -435,13 +435,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse16"
-                                        aria-expanded="false" aria-controls="collapse16">
+                                    aria-expanded="false" aria-controls="collapse16">
                                     ТАРИФ «Миллионер за 100 дней»
                                 </button>
 
 
                                 <div id="collapse16" class="collapse" aria-labelledby="heading6"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -459,7 +459,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -475,13 +475,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse7"
-                                        aria-expanded="false" aria-controls="collapse7">
+                                    aria-expanded="false" aria-controls="collapse7">
                                     ТАРИФ «Деньги в квадрате»
                                 </button>
 
 
                                 <div id="collapse7" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -501,7 +501,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -510,13 +510,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse8"
-                                        aria-expanded="false" aria-controls="collapse8">
+                                    aria-expanded="false" aria-controls="collapse8">
                                     ТАРИФ «На пол пути к миллиону»
                                 </button>
 
 
                                 <div id="collapse8" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -535,7 +535,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -544,13 +544,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse9"
-                                        aria-expanded="false" aria-controls="collapse9">
+                                    aria-expanded="false" aria-controls="collapse9">
                                     ТАРИФ «Расчетливый инвестор»
                                 </button>
 
 
                                 <div id="collapse9" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -570,7 +570,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -579,13 +579,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse10"
-                                        aria-expanded="false" aria-controls="collapse10">
+                                    aria-expanded="false" aria-controls="collapse10">
                                     ТАРИФ «Крипто король»
                                 </button>
 
 
                                 <div id="collapse10" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -604,7 +604,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>
@@ -613,13 +613,13 @@
 
 
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse11"
-                                        aria-expanded="false" aria-controls="collapse11">
+                                    aria-expanded="false" aria-controls="collapse11">
                                     ТАРИФ «Миллионер за 100 дней»
                                 </button>
 
 
                                 <div id="collapse11" class="collapse" aria-labelledby="heading6"
-                                     data-parent="#accordion">
+                                    data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -637,7 +637,7 @@
                                         </ul>
                                         <div class="note">*Примечание касательно страховки</div>
 
-                                        <button class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</button>
+                                        <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
 
                                     </div>
                                 </div>

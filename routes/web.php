@@ -33,7 +33,7 @@ Route::get('/loto', 'HomeController@loto')->name('loto');
 Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator');
 
 
-Route::get('/cabinet', 'CabinetController@index')->middleware(['auth','verified'])->name('cabinet');
+Route::get('/cabinet', 'CabinetController@index')->middleware(['auth'])->name('cabinet');
 Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');
 Route::get('/admin/users', 'AdminController@users')->middleware(['auth', 'admin'])->name('admin.users');
 Route::get('/admin/users/{user}/verify', 'AdminController@sendVerifyLink')->name('admin.verification_sent');

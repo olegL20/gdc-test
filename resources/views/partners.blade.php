@@ -5,7 +5,7 @@
         <div class="container">
             <div class="main-block">
 
-                <div class="main-container">
+                <div class="main-container" id="accordion">
                     <h2 class="partners-title">Реферальная программа разработанная компанией GDCinvest </h2>
                     <div class="partners-text">
 
@@ -20,15 +20,39 @@
                     </div>
                     <h3 class="rate-title">Данный тарифный план предназначен для предпринимателей реферальной
                         программы:</h3>
-                    <select name="" id="" class="rate-list">
-                        <option value="ТАРИФ «Расчетливый инвестор»">ТАРИФ «Расчетливый инвестор»</option>
-                        <option value="ТАРИФ «Расчетливый инвестор»">ТАРИФ «СТАРТ»</option>
-                        <option value="ТАРИФ «Расчетливый инвестор»">ТАРИФ «ДЕНЬГИ В КВАДРАТЕ»</option>
-                        <option value="ТАРИФ «Расчетливый инвестор»">ТАРИФ «НА ПОЛПУТИ К
-                            МИЛЛИОНУ»
-                        </option>
-                        <option value="ТАРИФ «Расчетливый инвестор»">ТАРИФ «КРИПТО КОРОЛЬ»</option>
-                    </select>
+                    <div class="accordion-list">
+                        <div class="card">
+
+                            <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse4"
+                                aria-expanded="false" aria-controls="collapse4">
+                                ТАРИФ «Расчетливый инвестор»
+                            </button>
+
+
+                            <div id="collapse4" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="description">При выборе данного тарифа Ваши деньги будут реинвестированы в займы под залог имущества.</p>
+                                    <p class="description">По истечению срока тарифа прибыль составит 170% к телу депозита</p>
+                                    <ul class="parameter-list">
+                                        <li class="parameter-item"><b class="title">Депозит:</b> От 200000р до
+                                            300000р.
+                                        </li>
+                                        <li class="parameter-item"><b class="title">Ставка:</b> 17%</li>
+                                        <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
+                                        <li class="parameter-item"><b class="title">Рефовод получает 12%</b></li>
+                                        <li class="parameter-item"><b class="title">Инвестиции в кредитование под
+                                                залог</b></li>
+                                    </ul>
+                                    <div class="note">*Примечание касательно страховки</div>
+
+                                    <a href="{{route('calculator')}}" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>

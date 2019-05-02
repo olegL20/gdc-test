@@ -29,7 +29,6 @@
 
                             <div class="col-md-6">
                                 <input id="surname" type="text" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname" value="{{ old('surname') }}" required autofocus>
-
                                 @if ($errors->has('surname'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('surname') }}</strong>
