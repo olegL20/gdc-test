@@ -7,10 +7,7 @@
                 <h1 class="heading-title">
                     ПАРТНЕРАМ
                 </h1>
-                <div class="col-12 col-xl-10 heading-description">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
-                </div>
+                
                 <div class="users-block">
                     <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
                     <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
@@ -41,28 +38,19 @@
                         программы:</h3>
                     <div class="accordion-list">
                         <div class="card">
+                               
+                                 
+                                <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                                    ТАРИФ «Партнер»
+                                </button>
+                                 
+                                
+                                <div id="collapse17" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p class="description">Это эксклюзивный тариф, который не требует от Вас абсолютно НИКАКИХ вложений, и позволяет заработать на сотрудничестве с GDCinvest. При привлечении нового инвестора для сотрудничества с нами, реферальная программа позволяет заработать до 15% от привлеченных инвестиций. Так же партнер получает от компании бонусные 100$.</p>
+                                        <p class="description">Благодаря успешному анализу азиатского рынка компания GDCinvestсмогла предложить выгодные условия, как инвесторам, так и заемщикам. Мы заключили договора с компаниями, занимающими лидирующие позиции в ключевых отраслях экономики КНР. Такой подход позволяет нам предложить инвесторам различные инструменты заработка и возможность реинвестирования финансов в различные сферы экономики. Так же все инвестиции застрахованы China Pacific Insurance Company.</p>
+                                        <p class="description">Совокупность всех факторов делает компанию GDCinvestуникальной платформойу которой нет достойных аналогов в мире. Мы можем гарантировать заработок и делаем это</p>
 
-                            <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse4"
-                                aria-expanded="false" aria-controls="collapse4">
-                                ТАРИФ «Расчетливый инвестор»
-                            </button>
-
-
-                            <div id="collapse4" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordion">
-                                <div class="card-body">
-                                    <p class="description">При выборе данного тарифа Ваши деньги будут реинвестированы в займы под залог имущества.</p>
-                                    <p class="description">По истечению срока тарифа прибыль составит 170% к телу депозита</p>
-                                    <ul class="parameter-list">
-                                        <li class="parameter-item"><b class="title">Депозит:</b> От 200000р до
-                                            300000р.
-                                        </li>
-                                        <li class="parameter-item"><b class="title">Ставка:</b> 17%</li>
-                                        <li class="parameter-item"><b class="title">Период:</b> 100 дней</li>
-                                        <li class="parameter-item"><b class="title">Рефовод получает 12%</b></li>
-                                        <li class="parameter-item"><b class="title">Инвестиции в кредитование под
-                                                залог</b></li>
-                                    </ul>
                                     <div class="note">*Примечание касательно страховки</div>
 
                                     <a href="{{route('calculator')}}" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
