@@ -1,6 +1,16 @@
 @extends('layouts.app')
 @section('content')
+    <section class="heading">
+        <div class="container">
+            <div class="heading-text">
+                <h1 class="heading-title">
+                    РАССЧИТАЙТЕ СВОЮ ПРИБЫЛЬ
+                </h1>
+                
+            </div>
 
+        </div>
+    </section>
     <section class="light-gradient clip-section"></section>
 
     <section class="light-gradient  main-section">

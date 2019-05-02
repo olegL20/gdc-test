@@ -1,5 +1,20 @@
 @extends('layouts.app')
 @section('content')
+    <section class="heading">
+        <div class="container">
+            <div class="heading-text">
+                <h1 class="heading-title">
+                    ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ 
+                </h1>
+                
+                <div class="users-block">
+                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
+                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <section class="light-gradient clip-section"></section>
     <section class="light-gradient  main-section">
         <div class="container">

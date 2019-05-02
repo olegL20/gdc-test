@@ -6,10 +6,7 @@
                 <h1 class="heading-title">
                     О КОМПАНИИ
                 </h1>
-                <div class="col-12 col-xl-10 heading-description">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
-                </div>
+               
                 <div class="users-block">
                     <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
                     <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
