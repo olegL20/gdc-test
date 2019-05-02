@@ -1028,7 +1028,7 @@ body {
               justify-content: space-between;
       grid-gap: 10px;
       margin-top: 20px;
-      padding-left: 30px;
+      padding-left: 0;
       padding-bottom: 60px;
       overflow: visible; }
       .offers .offers-list .offers-item {
