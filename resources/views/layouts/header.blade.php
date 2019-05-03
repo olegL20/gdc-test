@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{asset('css/otherPages.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.css')}}">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700&amp;subset=cyrillic"
           rel="stylesheet">
+
 </head>
 <body>
 
