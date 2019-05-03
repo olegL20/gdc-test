@@ -1,6 +1,3 @@
-@php
-@endphp
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +10,11 @@
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{asset('css/otherPages.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.css')}}">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700&amp;subset=cyrillic"
           rel="stylesheet">
+
 </head>
 <body>
 
@@ -44,12 +44,18 @@
                     <li class="nav-item">
                         <a class="nav-link @if (request()->route()->getName() === 'partners') active-link @endif" href="{{route('partners')}}">ПАРТНЕРАМ</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>
+                    </li>
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
 {{--                    </li>--}}
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>--}}
 {{--                    </li>--}}
+                    <li class="nav-item">
+                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link @if (
                         request()->route()->getName() === 'docs' ||
