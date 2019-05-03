@@ -1,5 +1,22 @@
 @extends('layouts.app')
 @section('content')
+    <section class="heading">
+        <div class="container">
+            <div class="heading-text">
+                <h1 class="heading-title">
+                    О КОМПАНИИ
+                </h1>
+
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endif
+            </div>
+
+        </div>
+    </section>
     <section class="light-gradient clip-section"></section>
     <section class="light-gradient  main-section">
         <div class="container">
@@ -118,7 +135,7 @@
                                     является вполне привычным делом. </p>
 
                             </div>
-                            <a href="document_base.html" class="document-base">ДОКУМЕНТАЛЬНАЯ БАЗА</a>
+                            <a href="{{route('docs')}}" class="document-base">ДОКУМЕНТАЛЬНАЯ БАЗА</a>
 
                         </div>
                         <div class="col-xl-6 content-item image-block">

@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout', function () {
@@ -28,12 +28,15 @@ Route::get('/news', 'HomeController@news')->name('news');
 Route::get('/reviews', 'HomeController@reviews')->name('reviews');
 Route::get('/documents', 'HomeController@documents')->name('docs');
 Route::get('/documents-interactive-investor', 'HomeController@documentII')->name('docsII');
+Route::get('/documents-cccl', 'HomeController@documentCCCL')->name('docsCCCL');
+Route::get('/documents-cpi', 'HomeController@documentCPI')->name('docsCPI');
+Route::get('/documents-gbsro', 'HomeController@documentGBSRO')->name('docsGBSRO');
 Route::get('/contacts', 'HomeController@contacts')->name('contacts');
 Route::get('/loto', 'HomeController@loto')->name('loto');
 Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator');
 
 
-Route::get('/cabinet', 'CabinetController@index')->middleware(['auth','verified'])->name('cabinet');
+Route::get('/cabinet', 'CabinetController@index')->middleware(['auth'])->name('cabinet');
 Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');
 Route::get('/admin/users', 'AdminController@users')->middleware(['auth', 'admin'])->name('admin.users');
 Route::get('/admin/users/{user}/verify', 'AdminController@sendVerifyLink')->name('admin.verification_sent');

@@ -1,5 +1,22 @@
 @extends('layouts.app')
 @section('content')
+    <section class="heading">
+        <div class="container">
+            <div class="heading-text">
+                <h1 class="heading-title">
+                    НАШИ НОВОСТИ
+                </h1>
+
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endif
+            </div>
+
+        </div>
+    </section>
     <section class="light-gradient clip-section"></section>
     <section class="light-gradient  main-section">
         <div class="container">

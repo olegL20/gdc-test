@@ -7,7 +7,8 @@
                     ДОКУМЕНТАЛЬНАЯ БАЗА
                 </h1>
                 <div class="col-12 col-xl-10 heading-description">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut
                         labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
                 </div>
@@ -18,14 +19,36 @@
                     </div>
                 @endif
             </div>
+
         </div>
     </section>
+
     <section class="light-gradient clip-section"></section>
+
     <section class="light-gradient  main-section">
+
         <div class="container">
             <div class="main-block">
-                <img src="/img/new-docs.jpg" class="base-page" alt="">
+
+                <img src="img/base-gbsro.png" alt="" class="base-page">
+                <img src="img/base-gbsro2.png" alt="" class="base-page">
+                <img src="img/base-gbsro3.png" alt="" class="base-page">
+
+
             </div>
+        </div>
+    </section>
+
+    <section class="light-gradient sponsors">
+        <div class="container">
+            <div class=" sponsors-list">
+                <a href="#" class=" sponsors-item"><img src="img/pfmoney.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="img/payeer.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="img/comodo.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="img/qiwi.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="img/ddos.png" alt=""></a>
+            </div>
+
         </div>
     </section>
 @endsection
