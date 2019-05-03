@@ -17,7 +17,7 @@ class CreateCashbacksTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->float('value');
-            $table->float('percent')->default('0.6');
+            $table->float('percent')->default('0.01162791');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

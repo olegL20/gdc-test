@@ -18,8 +18,11 @@ class AdminController extends Controller
 
     public function users()
     {
+        $verifiedUsers = User::where('verified', 1)->get();
+        $unverifiedUsers = User::where('verified', 0)->get();
         return view('admin.users.list')
-            ->with('users', User::all());
+            ->with('verifiedUsers', $verifiedUsers)
+            ->with('unverifiedUsers', $unverifiedUsers);
     }
 
     public function cashback(User $user, Request $request)

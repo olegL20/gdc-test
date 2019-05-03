@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <link rel="stylesheet" href="{{asset('css/otherPages.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.css')}}">
 
@@ -41,21 +42,15 @@
                     <li class="nav-item">
                         <a class="nav-link @if (request()->route()->getName() === 'faq') active-link @endif" href="{{route('faq')}}">FAQ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (request()->route()->getName() === 'partners') active-link @endif" href="{{route('partners')}}">ПАРТНЕРАМ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
+{{--                    </li>--}}
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
 {{--                    </li>--}}
 {{--                    <li class="nav-item">--}}
 {{--                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>--}}
 {{--                    </li>--}}
-                    <li class="nav-item">
-                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link @if (
                         request()->route()->getName() === 'docs' ||
@@ -73,11 +68,6 @@
                         <li class="nav-item">
                             <a class="nav-link @if (request()->route()->getName() === 'cabinet') active-link @endif" href="{{route('cabinet')}}">ЛИЧНЫЙ КАБИНЕТ</a>
                         </li>
-                        @if(auth()->user() && auth()->user()->isAdmin())
-                            <li class="nav-item">
-                                <a class="nav-link @if (request()->route()->getName() === 'admin') active-link @endif" href="{{route('admin')}}">Админ Панель</a>
-                            </li>
-                        @endif
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('logout')}}">Выйти</a>
                         </li>

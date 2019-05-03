@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Balance;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -75,6 +76,9 @@ class RegisterController extends Controller
         $user->role_id = 2;
         $user->password = Hash::make($data['password']);
         $user->save();
+        $balance = new Balance();
+        $balance->user_id = $user->id;
+        $balance->save();
         return $user;
     }
 

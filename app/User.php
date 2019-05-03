@@ -68,4 +68,19 @@ class User extends Authenticatable
         $this->verified = $bool;
         $this->save();
     }
+
+    public function getFullName()
+    {
+        return $this->name.' '.$this->surname;
+    }
+
+    public function balance()
+    {
+        return $this->hasOne(Balance::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

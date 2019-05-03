@@ -43,7 +43,7 @@ Route::get('/admin/users/{user}/verify', 'AdminController@sendVerifyLink')->name
 Route::get('/admin/users/{user}/set-cashback', 'AdminController@cashback')->middleware(['auth', 'admin'])->name('admin.cashback');
 
 Route::get('/referral/{code}')->name('referral');
-Route::get('/{user}/balance', 'CabinetController@balance')->name('balance');
+Route::get('/cabinet/{user}/balance', 'CabinetController@balance')->name('balance');
 Route::any('/skrill-callback', 'CabinetController@callbackSkrill')->name('skrill-callback');
 Route::get('/payment-succeed', function () {
     return view('pages.success');

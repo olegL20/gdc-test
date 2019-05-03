@@ -22,7 +22,7 @@ class UserSeed extends Seeder
                 'password' => '$2y$10$HAZjX8KtA5ddJwsGe8SuI.7edxxLy0ciM.gGIUvPQzdiJQvE0UoTy',
                 'role_id' => 1,
                 'remember_token' => '',
-
+                'verified' => true,
             ],
             [
                 'id' => 2,
