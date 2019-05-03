@@ -1,6 +1,3 @@
-@php
-@endphp
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,6 +44,12 @@
                     <li class="nav-item">
                         <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>
                     </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>--}}
+{{--                    </li>--}}
                     <li class="nav-item">
                         <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>
                     </li>

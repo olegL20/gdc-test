@@ -1,17 +1,19 @@
 @extends('layouts.app')
 @section('content')
-    
+
     <section class="heading">
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
                     ПАРТНЕРАМ
                 </h1>
-                
-                <div class="users-block">
-                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
+
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endif
             </div>
 
         </div>
@@ -29,7 +31,7 @@
                         <p class="paragraph">Это специальное деловое предложение для наших партнеров. После прохождения
                             процедуры регистрации на сайте компании, каждый пользователь может стать партнером и
                             автоматически получит возможность привлекать новых инвесторов для сотрудничества с
-                            CompanyName.</p>
+                            GDC Invest.</p>
                         <p class="paragraph">Реферальная программа позволяет партнерам зарабатывать прибыль в размере
                             12% от суммы депозита, который внес Ваш реферал на свой личный счет для дальнейшего
                             инвестирования.</p>
@@ -38,13 +40,13 @@
                         программы:</h3>
                     <div class="accordion-list">
                         <div class="card">
-                               
-                                 
+
+
                                 <button class="btn-collapse collapsed " data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
                                     ТАРИФ «Партнер»
                                 </button>
-                                 
-                                
+
+
                                 <div id="collapse17" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
                                     <div class="card-body">
                                         <p class="description">Это эксклюзивный тариф, который не требует от Вас абсолютно НИКАКИХ вложений, и позволяет заработать на сотрудничестве с GDCinvest. При привлечении нового инвестора для сотрудничества с нами, реферальная программа позволяет заработать до 15% от привлеченных инвестиций. Так же партнер получает от компании бонусные 100$.</p>

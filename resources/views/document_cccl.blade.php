@@ -11,10 +11,12 @@
                         ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
                 </div>
-                <div class="users-block">
-                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endif
             </div>
 
         </div>

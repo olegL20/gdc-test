@@ -38,7 +38,7 @@
     <section class="light-gradient  offers">
         <div class="container">
             <h2 class="section-title offers-title">МЫ ПРЕДЛАГАЕМ</h2>
-            <ul class="offers-list">
+            <ul class="owl-carousel offers-list">
                 <li class="offers-item">
                     <h3 class="item-title">СТАРТ</h3>
                     <h4 class="item-subtitle">ПРОЦЕНТ</h4>

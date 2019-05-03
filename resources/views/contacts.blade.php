@@ -6,11 +6,12 @@
                 <h1 class="heading-title">
                     НАШИ КОНТАКТЫ
                 </h1>
-                
-                <div class="users-block">
-                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
+                @guest
+                    <div class="users-block">
+                        <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endguest
             </div>
 
         </div>
@@ -22,14 +23,14 @@
                 <form class="contact-form">
                     <div class="row">
                         <div class="col-xl-6 col-xxl-4 form-item">
-                            <h1 style="text-align: center; font-size: 3em;margin-bottom: 50px;"><strong>Контакты</strong></h1>
-                            <p style="justify-content: center;font-size: 20px;margin-bottom: 15px;">Вы можете связаться с нами любым удобным для вас способом.
+                            <p style="justify-content: center;font-size: 20px;margin-bottom: 15px;">Вы можете связаться
+                                с нами любым удобным для вас способом.
                                 Наши телефоны многоканальные.
                             </p>
                             <h1 style="    font-size: 1.5em;    font-style: oblique;">Гарячая линия:</h1>
-                                <p style="margin-bottom: 10px; margin-top:15px;font-size: 1.2em;">+85258010932</p>
-                                <p style="margin-bottom: 10px; font-size: 1.2em;">+85258080723</p>
-                                <p style="margin-bottom: 10px; font-size: 1.2em;">+74951080929</p>
+                            <p style="margin-bottom: 10px; font-size: 1.2em;">+85258010932</p>
+                            <p style="margin-bottom: 10px; font-size: 1.2em;">+85258080723</p>
+                            <p style="margin-bottom: 10px; font-size: 1.2em;">+74951080929</p>
                         </div>
                         <div class="col-xl-6 col-xxl-8">
                             <div class="row">

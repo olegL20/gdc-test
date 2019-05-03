@@ -4,13 +4,15 @@
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
-                    ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ 
+                    ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
                 </h1>
-                
-                <div class="users-block">
-                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
+
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
+                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                    </div>
+                @endif
             </div>
 
         </div>
