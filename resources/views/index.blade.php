@@ -104,13 +104,14 @@
                 </li>
             </ul>
             <div class="text-center d-none d-xl-block">
-                <a href="{{route('calculator')}}" class="calculate-profit">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                <a href="{{route('calculator')}}" class="calculate-profit mr-2">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                <a href="/profit-calculator#rates" class="calculate-profit all-rate">Все тарифы</a>
             </div>
         </div>
     </section>
     <section class="light-gradient features">
         <div class="container">
-            <h2 class="section-title">ПОЧЕМУ МЫ?</h2>
+            <h2 class="section-title features-title">ПОЧЕМУ МЫ?</h2>
             <ul class="row features-list">
                 <li class="col-xl-6 features-item">
                     <img src="img/open-account.png" alt="" class="item-image">
@@ -163,22 +164,21 @@
                     <p class="text-description">GDC Invest позиционируется как микрофинансовая, инвестиционная и
                         аналитическая организация с продуманной структурой управления, ясными задачами, вполне
                         достижимыми целями.</p>
-                    <p class="text-description md-hidden">Компания GDC Invest уникальна в своём роде, это перспективный
-                        механизм с доступным и экономически эффективным маркетинговым подходом. Который способен
-                        обеспечить долгосрочные перспективы прибыли для людей, которые открывают для себя новые
-                        возможности, стремящиеся обрести финансовое благополучие. Мы предлагаем ежедневную динамику
+                    <p class="text-description xl-hidden">Компания GDC Invest уникальна в своём роде, это перспективный
+                        механизм с доступным и экономически эффективным маркетинговым подходом. Мы предлагаем ежедневную динамику
                         процентную ставку от 0.6% до 2.4% в день, а также дополнительные возможности для большего
                         заработка. Инвестиционные депозиты работают 100 дней.</p>
-                    <p class="text-description bold md-hidden">
+                    <p class="text-description bold xl-hidden">
                         Компания GDCinvest - Ваш надежный партнер!</p>
+                    <div class="text-center">
+                        <a href="{{route('about')}}" class="learn-more">УЗНАТЬ ПОДРОБНЕЕ</a>
+                    </div>
                 </div>
                 <div class="img-container d-none d-xl-block">
                     <img src="img/company.png" alt="" class="company-image md-hidden">
-                    <img src="img/md-company.png" alt="" class="company-image md-show">
+                    <img src="img/md-company.jpg" alt="" class="company-image md-show">
                 </div>
-                <div class="text-center">
-                    <a href="{{route('about')}}" class="learn-more">УЗНАТЬ ПОДРОБНЕЕ</a>
-                </div>
+                
             </div>
 
         </div>
@@ -214,7 +214,7 @@
             <div class="row referal-content">
                 <div class="d-none d-xl-block col-xl-6">
                     <img src="img/referal.png" alt="" class="referal-image md-hidden">
-                    <img src="img/referal-1280.png" alt="" class="referal-image md-show">
+                    <img src="img/referal-1280.jpg" alt="" class="referal-image md-show">
                 </div>
                 <div class="col-12 col-xl-6 referal-text">
 

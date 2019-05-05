@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('css/otherPages.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700&amp;subset=cyrillic"
@@ -24,7 +25,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-xl navbar-dark header-navbar">
             <a class="navbar-brand" href="/">
-                <img src="{{asset('img/nav-brand.png')}}" alt="" class="nav-brand-img">
+                <img src="{{asset('img/nav-brand.svg')}}" alt="" class="nav-brand-img">
 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"

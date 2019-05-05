@@ -78,7 +78,7 @@
                             <p class="questions-answer">Вы можете открыть любое количество депозитов.</p>
                         </li>
                         <li class="col-xl-12 col-xxl-6 questions-item ">
-                            <h4 class="questions-title">Существуют ли какие-либо плата за снятие средств?</h4>
+                            <h4 class="questions-title">Существует ли какая-либо плата за снятие средств?</h4>
                             <p class="questions-answer">Наша компания не взимает комиссию за снятие.</p>
                         </li>
                         <li class="col-xl-12 col-xxl-6 questions-item ">

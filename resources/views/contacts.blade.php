@@ -52,9 +52,11 @@
                                 </div>
 
                             </div>
-                            <div class="col-xl-12 col-xxl-4 form-item">
-                                <label for="" class="field-name">Ваше сообщение:*</label>
-                                <textarea class="field-value" placeholder="Введите ваше сообщение"></textarea>
+                            <div class="row">
+                                <div class="col-xl-12 col-xxl-12 form-item">
+                                    <label for="" class="field-name">Ваше сообщение:*</label>
+                                    <textarea class="field-value" placeholder="Введите ваше сообщение"></textarea>
+                                </div>
                             </div>
                         </div>
 

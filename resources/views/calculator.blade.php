@@ -86,7 +86,7 @@
                         </div>
 
                     </div>
-                    <div class="rate-plan">
+                    <div class="rate-plan" id="rates">
                         <h3 class="title-plan">Описание тарифных планов</h3>
                         <div class="plan-category">РУБЛЕВЫЕ ТАРИФЫ</div>
                         <div class="accordion-list">

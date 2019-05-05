@@ -21,11 +21,20 @@ class CabinetController extends Controller
         $link = $programm->first() ? $programm->first()->code : null;
         $cashbackStart = $user->cashback ? new Carbon($user->cashback->created_at) : Carbon::now();
         $days = $cashbackStart->diffInDays(Carbon::now());
+        $cashbackValue = $user->cashback ? $user->cashback->value : 0;
         $cashback = $user->cashback ? $user->cashback->value * $user->cashback->percent * $days : 0;
+        $cashbackInTheEnd = $user->cashback ? $user->cashback->value * $user->cashback->percent * 100 : 0;
+        $cashbackForOneDay = $user->cashback ? $user->cashback->value * $user->cashback->percent * 1 : 0;
+        $incomeDate = (new Carbon(Carbon::now()))->addDays(86);
 
         return view('cabinet.cabinet')
             ->with('user', $user)
-            ->with('cashback', number_format($cashback, 2, ',', ' '). '     RUB')
+            ->with('cashback', number_format($cashback, 2, ',', ' '). ' RUB')
+            ->with('cashbackInTheEnd', number_format($cashbackInTheEnd, 2, ',', ' '). ' RUB')
+            ->with('cashbackForOneDay', number_format($cashbackForOneDay, 2, ',', ' '). ' RUB')
+            ->with('incomeDate', $incomeDate->format('d-m-Y'))
+            ->with('cashbackStart', $cashbackStart->format('d-m-Y'))
+            ->with('cashbackValue', number_format($cashbackValue, 2, ',', ' '). ' RUB')
             ->with('link', $link);
     }
 
@@ -46,7 +55,7 @@ class CabinetController extends Controller
         return view('cabinet.balance')
             ->with('form', $form)
             ->with('user', $user)
-            ->with('cashback', number_format($cashback, 2, ',', ' '). '     RUB');
+            ->with('cashback', number_format($cashback, 2, ',', ' '). '$');
     }
 
     public function callbackSkrill(Request $request)

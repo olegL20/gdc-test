@@ -4,7 +4,7 @@
     <section class="light-gradient  main-section">
         <div class="container">
             <div class="main-block">
-                <section class="main-section" id="accordion">
+                <section class="admin-section" id="accordion">
                     <div class="container">
                         <div class="row users-data">
                             <div class="col-12 col-md-7 user-item">
@@ -20,9 +20,6 @@
                                         </li>
                                         <li class="list-item">
                                             <i class="fas fa-address-card"></i><span>{{$user->address}}</span>
-                                        </li>
-                                        <li class="list-item">
-                                            <i class="fas fa-money-bill"></i><span>Cash-back: {{$cashback}}</span>
                                         </li>
                                     </ul>
                                     <form action="" class="change-form d-none">
@@ -56,7 +53,8 @@
                                     <div class="balance-title">Баланс:</div>
                                     <div class="balance-value">{{$user->balance->amount}}$</div>
                                     <button disabled class="get-cash disabled">Вывод средств</button>
-                                    <a href="{{route('balance', ['user' => $user])}}" class="get-cash">Пополнить баланс</a>
+                                    <a href="{{route('balance', ['user' => $user])}}" class="get-cash">Пополнить
+                                        баланс</a>
                                 </div>
 
                             </div>
@@ -99,6 +97,17 @@
                                     aria-controls="king"
                                     aria-selected="false">Крипто король</a>
                             </li>
+                            @if ($cashbackValue > 0)
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        id="cashback-tab"
+                                        data-toggle="tab"
+                                        href="#cashback"
+                                        role="tab"
+                                        aria-controls="cashback"
+                                        aria-selected="false">Cashback</a>
+                                </li>
+                            @endif
                         </ul>
                         <div class="tab-content" id="tab-content">
                             <div class="tab-pane fade show active" id="rate" role="tabpanel" aria-labelledby="rate-tab">
@@ -993,6 +1002,37 @@
                                     </div>
                                 </div>
                             </div>
+                            @if ($cashbackValue > 0)
+                                <div class="tab-pane fade" id="cashback" role="tabpanel" aria-labelledby="cashback-tab">
+                                    <div class="king-content">
+                                        <div class="king-text">
+                                            <table class="rate-table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Полная сумма</th>
+                                                    <th scope="col">Начисление в день</th>
+                                                    <th scope="col">Начислено на текущий день</th>
+                                                    <th scope="col">Дата начала</th>
+                                                    <th scope="col">Дата начала прибыли</th>
+                                                    <th scope="col">Итоговая сумма</th>
+
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>{{$cashbackValue}}</td>
+                                                    <td>{{$cashbackForOneDay}}</td>
+                                                    <td>{{$cashback}}</td>
+                                                    <td>{{$cashbackStart}}</td>
+                                                    <td>{{$incomeDate}}</td>
+                                                    <td>{{$cashbackInTheEnd}}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </section>

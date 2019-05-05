@@ -64,7 +64,7 @@
 
                 </ul>
 
-                <a href="" class="logout"><i class="fas fa-sign-out-alt"></i> <span>Выйти</span></a>
+                <a href="{{route('logout')}}" class="logout"><i class="fas fa-sign-out-alt"></i> <span>Выйти</span></a>
 
 
             </div>
