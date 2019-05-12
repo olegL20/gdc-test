@@ -75,7 +75,7 @@ h2.section-title::before {
 .users-block a.btn {
   display: inline-block;
   -webkit-border-radius: 30px;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 15px 52px;
   border: 1px solid #ffffff;
   background: transparent;

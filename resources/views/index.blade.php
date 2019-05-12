@@ -18,16 +18,16 @@
                         <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
                     </div>
                 @endif
-                <a href="{{route('loto')}}" class="banner">
-                    <div class="banner-text">
-                        <p class="title">Розыгрыш
-                            Выиграй до 2 BTC</p>
-                        <p class="description">sponsored by General bytes</p>
-                    </div>
-                    <div class="banner-arrow-block">
-                        <img src="img/arrow-banner.png" alt="">
-                    </div>
-                </a>
+{{--                <a href="{{route('loto')}}" class="banner">--}}
+{{--                    <div class="banner-text">--}}
+{{--                        <p class="title">Розыгрыш--}}
+{{--                            Выиграй до 2 BTC</p>--}}
+{{--                        <p class="description">sponsored by General bytes</p>--}}
+{{--                    </div>--}}
+{{--                    <div class="banner-arrow-block">--}}
+{{--                        <img src="img/arrow-banner.png" alt="">--}}
+{{--                    </div>--}}
+{{--                </a>--}}
             </div>
             <div class="welcome-image d-none d-xl-block">
                 <img class="content-image" src="img/welcome.png" alt="">
