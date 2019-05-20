@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Rate;
+use App\ReferralLink;
 use App\User;
 use Illuminate\Http\Request;
 use zvook\Skrill\Components\SkrillException;
@@ -17,9 +18,7 @@ class CabinetController extends Controller
     {
         /** @var User $user $user */
         $user = $request->user();
-
-        $programm = $user->getReferrals();
-        $link = $programm->first() ? $programm->first()->code : null;
+        $link = $user->referralLink ? $user->referralLink->code : null;
         $cashbackStart = $user->cashback ? new Carbon($user->cashback->created_at) : Carbon::now();
         $days = $cashbackStart->diffInDays(Carbon::now());
         $cashbackValue = $user->cashback ? $user->cashback->value : 0;
@@ -78,5 +77,12 @@ class CabinetController extends Controller
         }
 
         redirect()->route('cabinet', ['user' => $request->user()]);
+    }
+
+    public function referralJoin(string $code)
+    {
+        $refUser = ReferralLink::where('code', $code)->first();
+
+        return redirect()->route('register', ['refUser' => $refUser->user->id]);
     }
 }

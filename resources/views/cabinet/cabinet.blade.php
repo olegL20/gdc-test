@@ -314,9 +314,14 @@
                                         <p class="description">Делитесь реферальной ссылкой удобным способом и получайте
                                             бонусы за новых пользователей.</p>
                                     </div>
-                                    <div class="referal-link">http://www.sample_site.com/index.php?ref=newuser=23</div>
-                                    <div class="referal-info">Количество приглашенных пользователей:
-                                        <span class="number">11</span></div>
+                                    @if ($link)
+                                        <div class="referal-link">{{route('referral', ['code' => $link])}}</div>
+                                        <div class="referal-info">Количество приглашенных пользователей:
+                                            <span class="number">{{count($user->invitedUsers)}}</span>
+                                        </div>
+                                    @else
+                                        <div>У Вас пока нет своей реферальной ссылки</div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="king" role="tabpanel" aria-labelledby="king-tab">

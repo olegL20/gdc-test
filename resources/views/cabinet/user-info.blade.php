@@ -11,7 +11,10 @@
                     <i class="fas fa-envelope"></i><span>{{$user->email}}</span>
                 </li>
                 <li class="list-item">
-                    <i class="fas fa-address-card"></i><span>{{$user->address}}</span>
+                    <i class="fas fa-address-card"></i><span>{{$user->region.','.$user->country}}</span>
+                </li>
+                <li class="list-item">
+                    <i class="fas fa-address-card"></i><span>{{$user->phone}}</span>
                 </li>
             </ul>
             <form action="" class="change-form d-none">

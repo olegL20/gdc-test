@@ -9,6 +9,7 @@ class Transaction extends Model
     protected $guarded = ['id'];
 
     const TYPE_INVEST = 'INVEST';
+    const REF_REWARD = 'REWARD FOR REFERRAL INVITATION';
     const TYPE_BALANCE = 'FILL BALANCE';
     const TYPE_OUTPUT = 'PULL BALANCE';
 

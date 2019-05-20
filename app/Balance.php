@@ -13,6 +13,12 @@ class Balance extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function increaseBalance(float $amount)
+    {
+        $this->amount = $this->amount + $amount;
+        $this->save();
+    }
+
     public function getRealBalance(): float
     {
         return ($this->amount - $this->locked_amount);

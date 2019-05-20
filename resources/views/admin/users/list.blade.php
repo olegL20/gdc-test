@@ -25,7 +25,7 @@
             <div class="tab-content" id="tab-content">
                 <div class="tab-pane fade" id="rate" role="tabpanel" aria-labelledby="rate-tab">
                     <div class="table-responsive">
-                        <table class="rate-table">
+                        <table class="rate-table table">
                             <thead>
                             <tr>
                                 <th scope="col">Имя</th>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="tab-pane fade show active" id="history" role="tabpanel" aria-labelledby="history-tab">
                     <div class="table-responsive">
-                        <table class="rate-table">
+                        <table class="rate-table table">
                             <thead>
                             <tr>
                             <tr>

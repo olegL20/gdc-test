@@ -12,14 +12,8 @@ class User extends Authenticatable
 {
     use Notifiable, Billable, ReferralsMember;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    const MoneyForInvite = 6500;
+    protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -87,5 +81,20 @@ class User extends Authenticatable
     public function rates()
     {
         return $this->belongsToMany(Rate::class);
+    }
+
+    public function referralLink()
+    {
+        return $this->hasOne(ReferralLink::class);
+    }
+
+    public function invitedUsers()
+    {
+        return $this->belongsToMany(User::class, 'referrals', 'ref_id', 'inv_id');
+    }
+
+    public function referredUser()
+    {
+        return $this->belongsToMany(User::class, 'referrals', 'inv_id', 'ref_id');
     }
 }

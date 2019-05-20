@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Balance;
+use App\Referral;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -54,7 +55,9 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
-            'address' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255'],
+            'region' => ['required', 'string', 'max:255'],
+            'country' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
@@ -72,13 +75,17 @@ class RegisterController extends Controller
         $user->name = $data['name'];
         $user->surname = $data['surname'];
         $user->email = $data['email'];
-        $user->address = $data['address'];
+        $user->region = $data['region'];
+        $user->country = $data['country'];
+        $user->phone = $data['phone'];
         $user->role_id = 2;
         $user->password = Hash::make($data['password']);
         $user->save();
         $balance = new Balance();
         $balance->user_id = $user->id;
         $balance->save();
+        $user->referredUser()->attach(User::find($data['refUser']));
+
         return $user;
     }
 
