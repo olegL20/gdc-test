@@ -18,16 +18,16 @@
                         <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
                     </div>
                 @endif
-{{--                <a href="{{route('loto')}}" class="banner">--}}
-{{--                    <div class="banner-text">--}}
-{{--                        <p class="title">Розыгрыш--}}
-{{--                            Выиграй до 2 BTC</p>--}}
-{{--                        <p class="description">sponsored by General bytes</p>--}}
-{{--                    </div>--}}
-{{--                    <div class="banner-arrow-block">--}}
-{{--                        <img src="img/arrow-banner.png" alt="">--}}
-{{--                    </div>--}}
-{{--                </a>--}}
+                <a href="{{route('loto')}}" class="banner">
+                    <div class="banner-text">
+                        <p class="title">Розыгрыш
+                            Выиграй до 2 BTC</p>
+                        <p class="description">sponsored by General bytes</p>
+                    </div>
+                    <div class="banner-arrow-block">
+                        <img src="img/arrow-banner.png" alt="">
+                    </div>
+                </a>
             </div>
             <div class="welcome-image d-none d-xl-block">
                 <img class="content-image" src="img/welcome.png" alt="">
@@ -39,69 +39,74 @@
         <div class="container">
             <h2 class="section-title offers-title">МЫ ПРЕДЛАГАЕМ</h2>
             <ul class="owl-carousel offers-list">
-                <li class="offers-item">
-                    <h3 class="item-title">СТАРТ</h3>
-                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                    <p class="subtitle-description">0.7% В ДЕНЬ</p>
-                    <h4 class="item-subtitle">ПЕРИОД</h4>
-                    <p class="subtitle-description">100 ДНЕЙ</p>
-                    <h4 class="item-subtitle">СУММА</h4>
-                    <p class="subtitle-description">7000RUB-70000RUB</p>
-                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
-                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
-                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
-                </li>
-                <li class="offers-item">
-                    <h3 class="item-title">ДЕНЬГИ
-                        В КВАДРАТЕ</h3>
-                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                    <p class="subtitle-description">1% В ДЕНЬ</p>
-                    <h4 class="item-subtitle">ПЕРИОД</h4>
-                    <p class="subtitle-description">100 ДНЕЙ</p>
-                    <h4 class="item-subtitle">СУММА</h4>
-                    <p class="subtitle-description">100000RUB-250000RUB</p>
-                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
-                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
-                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
-                </li>
-                <li class="offers-item">
-                    <h3 class="item-title">НА ПОЛПУТИ К
-                        МИЛЛИОНУ</h3>
-                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                    <p class="subtitle-description">15% В ДЕНЬ</p>
-                    <h4 class="item-subtitle">ПЕРИОД</h4>
-                    <p class="subtitle-description">100 ДНЕЙ</p>
-                    <h4 class="item-subtitle">СУММА</h4>
-                    <p class="subtitle-description">200000RUB-300000RUB</p>
-                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
-                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
-                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
-                </li>
-                <li class="offers-item">
-                    <h3 class="item-title">РАСЧЕТЛИВЫЙ
-                        ИНВЕСТОР</h3>
-                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                    <p class="subtitle-description">17% В ДЕНЬ</p>
-                    <h4 class="item-subtitle">ПЕРИОД</h4>
-                    <p class="subtitle-description">100 ДНЕЙ</p>
-                    <h4 class="item-subtitle">СУММА</h4>
-                    <p class="subtitle-description">7000RUB-70000RUB</p>
-                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
-                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
-                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
-                </li>
-                <li class="offers-item">
-                    <h3 class="item-title">КРИПТО КОРОЛЬ</h3>
-                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                    <p class="subtitle-description">2% В ДЕНЬ</p>
-                    <h4 class="item-subtitle">ПЕРИОД</h4>
-                    <p class="subtitle-description">100 ДНЕЙ</p>
-                    <h4 class="item-subtitle">СУММА</h4>
-                    <p class="subtitle-description">1 BTC</p>
-                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
-                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
-                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
-                </li>
+                @foreach($rates as $rate)
+                    @if($rate->title != 'Партнер')
+                    <li class="offers-item">
+                        <h3 class="item-title">{{$rate->title}}</h3>
+                        <h4 class="item-subtitle">ПРОЦЕНТ</h4>
+                        <p class="subtitle-description">{{$rate->percent_per_day}}% В ДЕНЬ</p>
+                        <h4 class="item-subtitle">ПЕРИОД</h4>
+                        <p class="subtitle-description">{{$rate->days}} ДНЕЙ</p>
+                        <h4 class="item-subtitle">СУММА</h4>
+                        <p class="subtitle-description">от {{$rate->min_amount.' '.$rate->currency}}</p>
+                        <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
+                        <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
+                        <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
+                    </li>
+                    @endif
+                @endforeach
+
+{{--                <li class="offers-item">--}}
+{{--                    <h3 class="item-title">ДЕНЬГИ--}}
+{{--                        В КВАДРАТЕ</h3>--}}
+{{--                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>--}}
+{{--                    <p class="subtitle-description">1% В ДЕНЬ</p>--}}
+{{--                    <h4 class="item-subtitle">ПЕРИОД</h4>--}}
+{{--                    <p class="subtitle-description">100 ДНЕЙ</p>--}}
+{{--                    <h4 class="item-subtitle">СУММА</h4>--}}
+{{--                    <p class="subtitle-description">100000RUB-250000RUB</p>--}}
+{{--                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>--}}
+{{--                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>--}}
+{{--                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>--}}
+{{--                </li>--}}
+{{--                <li class="offers-item">--}}
+{{--                    <h3 class="item-title">НА ПОЛПУТИ К--}}
+{{--                        МИЛЛИОНУ</h3>--}}
+{{--                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>--}}
+{{--                    <p class="subtitle-description">15% В ДЕНЬ</p>--}}
+{{--                    <h4 class="item-subtitle">ПЕРИОД</h4>--}}
+{{--                    <p class="subtitle-description">100 ДНЕЙ</p>--}}
+{{--                    <h4 class="item-subtitle">СУММА</h4>--}}
+{{--                    <p class="subtitle-description">200000RUB-300000RUB</p>--}}
+{{--                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>--}}
+{{--                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>--}}
+{{--                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>--}}
+{{--                </li>--}}
+{{--                <li class="offers-item">--}}
+{{--                    <h3 class="item-title">РАСЧЕТЛИВЫЙ--}}
+{{--                        ИНВЕСТОР</h3>--}}
+{{--                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>--}}
+{{--                    <p class="subtitle-description">17% В ДЕНЬ</p>--}}
+{{--                    <h4 class="item-subtitle">ПЕРИОД</h4>--}}
+{{--                    <p class="subtitle-description">100 ДНЕЙ</p>--}}
+{{--                    <h4 class="item-subtitle">СУММА</h4>--}}
+{{--                    <p class="subtitle-description">7000RUB-70000RUB</p>--}}
+{{--                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>--}}
+{{--                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>--}}
+{{--                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>--}}
+{{--                </li>--}}
+{{--                <li class="offers-item">--}}
+{{--                    <h3 class="item-title">КРИПТО КОРОЛЬ</h3>--}}
+{{--                    <h4 class="item-subtitle">ПРОЦЕНТ</h4>--}}
+{{--                    <p class="subtitle-description">2% В ДЕНЬ</p>--}}
+{{--                    <h4 class="item-subtitle">ПЕРИОД</h4>--}}
+{{--                    <p class="subtitle-description">100 ДНЕЙ</p>--}}
+{{--                    <h4 class="item-subtitle">СУММА</h4>--}}
+{{--                    <p class="subtitle-description">1 BTC</p>--}}
+{{--                    <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>--}}
+{{--                    <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>--}}
+{{--                    <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>--}}
+{{--                </li>--}}
             </ul>
             <div class="text-center d-none d-xl-block">
                 <a href="{{route('calculator')}}" class="calculate-profit mr-2">РАССЧИТАТЬ ПРИБЫЛЬ</a>

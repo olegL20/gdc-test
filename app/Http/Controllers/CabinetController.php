@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rate;
 use App\User;
 use Illuminate\Http\Request;
 use zvook\Skrill\Components\SkrillException;
@@ -35,7 +36,8 @@ class CabinetController extends Controller
             ->with('incomeDate', $incomeDate->format('d-m-Y'))
             ->with('cashbackStart', $cashbackStart->format('d-m-Y'))
             ->with('cashbackValue', number_format($cashbackValue, 2, ',', ' '). ' RUB')
-            ->with('link', $link);
+            ->with('link', $link)
+            ->with('rates', Rate::all());
     }
 
     public function balance(User $user)

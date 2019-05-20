@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\LotteryWinner;
+use App\Rate;
+use Carbon\Carbon;
+use DemeterChain\C;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with('rates', Rate::all());
     }
 
     public function about()
@@ -78,6 +82,11 @@ class HomeController extends Controller
 
     public function loto()
     {
-        return view('loto');
+        $winners = LotteryWinner::whereDate('time', Carbon::now())->get();
+        $endDate = new Carbon($winners->first()->time);
+        $date = explode(':', gmdate('H:i:s', $endDate->diffInSeconds(Carbon::now())));
+        return view('loto')
+            ->with('winners', $winners)
+            ->with('date', $date);
     }
 }

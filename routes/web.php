@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index')->with('rates', \App\Rate::all());
 })->name('home');
 
 Auth::routes();
@@ -39,6 +39,13 @@ Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator
 Route::get('/cabinet', 'CabinetController@index')->middleware(['auth'])->name('cabinet');
 Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');
 Route::get('/admin/users', 'AdminController@users')->middleware(['auth', 'admin'])->name('admin.users');
+Route::get('/admin/lottery', 'LotteryController@admin')->middleware(['auth', 'admin'])->name('admin.lottery');
+Route::get('/admin/lottery/create-winner', 'LotteryController@createWinner')->middleware(['auth', 'admin'])->name('admin.winner-create');
+Route::get('/admin/lottery/{winner}/delete', 'LotteryController@deleteWinner')->middleware(['auth', 'admin'])->name('admin.winner-delete');
+Route::get('/admin/rates', 'RateController@rates')->middleware(['auth', 'admin'])->name('admin.rates');
+Route::get('/admin/rates/create', 'RateController@createRate')->middleware(['auth', 'admin'])->name('rate_create');
+Route::get('/rates/{rate}/invest', 'RateController@investRate')->middleware(['auth'])->name('invest');
+Route::get('/rates/{rate}/start-invest', 'RateController@invest')->middleware(['auth'])->name('start_invest');
 Route::get('/admin/users/{user}/verify', 'AdminController@sendVerifyLink')->name('admin.verification_sent');
 Route::get('/admin/users/{user}/set-cashback', 'AdminController@cashback')->middleware(['auth', 'admin'])->name('admin.cashback');
 

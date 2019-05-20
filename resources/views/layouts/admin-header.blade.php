@@ -60,6 +60,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="">Тарифы</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.lottery')}}">Лотерея</a>
+                    </li>
 
 
                 </ul>

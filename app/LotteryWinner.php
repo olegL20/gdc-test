@@ -4,13 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class LotteryWinner extends Model
 {
     protected $guarded = ['id'];
-
-    const TYPE_INVEST = 'INVEST';
-    const TYPE_BALANCE = 'FILL BALANCE';
-    const TYPE_OUTPUT = 'PULL BALANCE';
 
     public function user()
     {

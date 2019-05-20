@@ -83,4 +83,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Transaction::class);
     }
+
+    public function rates()
+    {
+        return $this->belongsToMany(Rate::class);
+    }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\LotteryWinner;
+use App\Rate;
 use App\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -27,6 +29,8 @@ class RouteServiceProvider extends ServiceProvider
         //
         parent::boot();
         $this->model('user', User::class);
+        $this->model('rate', Rate::class);
+        $this->model('winner', LotteryWinner::class);
     }
 
     /**
