@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReferralLinksTable extends Migration
+class CreateUsersReferralLinksTable extends Migration
 {
     /**
      * Run the migrations.
