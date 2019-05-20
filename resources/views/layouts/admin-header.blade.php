@@ -52,14 +52,14 @@
                         <a class="nav-link " href="{{route('admin.users')}}">Пользователи </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Транзакции</a>
+                        <a class="nav-link" href="{{route('admin.transactions')}}">Транзакции</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Тарифы</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="">Новости</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link" href="">Тарифы</a>--}}
+{{--                    </li>--}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('admin.lottery')}}">Лотерея</a>
                     </li>

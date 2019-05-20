@@ -39,6 +39,7 @@ Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator
 Route::get('/cabinet', 'CabinetController@index')->middleware(['auth'])->name('cabinet');
 Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');
 Route::get('/admin/users', 'AdminController@users')->middleware(['auth', 'admin'])->name('admin.users');
+Route::get('/admin/transactions', 'AdminController@transactions')->middleware(['auth', 'admin'])->name('admin.transactions');
 Route::get('/admin/lottery', 'LotteryController@admin')->middleware(['auth', 'admin'])->name('admin.lottery');
 Route::get('/admin/lottery/create-winner', 'LotteryController@createWinner')->middleware(['auth', 'admin'])->name('admin.winner-create');
 Route::get('/admin/lottery/{winner}/delete', 'LotteryController@deleteWinner')->middleware(['auth', 'admin'])->name('admin.winner-delete');

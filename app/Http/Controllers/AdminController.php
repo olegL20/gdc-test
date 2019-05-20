@@ -40,11 +40,12 @@ class AdminController extends Controller
     public function sendVerifyLink(User $user, Request $request)
     {
         $refUser = $user->referredUser;
-        $refUser->balance->increaseBalance(User::MoneyForInvite);
+        $refUser->first()->balance->increaseBalance(User::MoneyForInvite);
         $transaction = new Transaction();
         $transaction->type = Transaction::REF_REWARD;
         $transaction->amount = User::MoneyForInvite;
-        $transaction->user_id = $refUser->id;
+        $transaction->user_id = $refUser->first()->id;
+        $transaction->balance = $refUser->first()->balance->getRealBalance();
         $transaction->save();
         $user->verification(!$request->has('decline') || $request->has('verify'));
         $refferal = new ReferralLink();
@@ -54,5 +55,11 @@ class AdminController extends Controller
         $refferal->save();
         Mail::to($user)->send(new UserVerify($user));
         return back();
+    }
+
+    public function transactions()
+    {
+        return view('admin.transaction.list')
+            ->with('transactions', Transaction::all());
     }
 }
