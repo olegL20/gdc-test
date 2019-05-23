@@ -4,14 +4,14 @@
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
-                    НАШИ КОНТАКТЫ
+                    {{__('menu.contacts')}}
                 </h1>
-                @guest
+                @if (auth()->guest())
                     <div class="users-block">
-                        <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                        <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
+                        <a href="{{route('register')}}" class="btn register">{{__('auth.Register')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('auth.signin')}}</a>
                     </div>
-                @endguest
+                @endif
             </div>
 
         </div>
@@ -73,11 +73,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
-                <a href="#" class=" sponsors-item"><img src="img/pfmoney.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/payeer.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/comodo.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/qiwi.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/ddos.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>

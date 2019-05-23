@@ -77,16 +77,17 @@ class HomeController extends Controller
 
     public function calculation()
     {
-        return view('calculator');
+        $rates = Rate::where('title', '!=', 'Партнер')->get();
+        return view('calculator', [
+            'rates' => $rates,
+        ]);
     }
 
     public function loto()
     {
         $winners = LotteryWinner::whereDate('time', Carbon::now())->get();
-        $endDate = new Carbon($winners->first()->time);
-        $date = explode(':', gmdate('H:i:s', $endDate->diffInSeconds(Carbon::now())));
+
         return view('loto')
-            ->with('winners', $winners)
-            ->with('date', $date);
+            ->with('winners', $winners ?? []);
     }
 }

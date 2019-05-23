@@ -8,15 +8,19 @@
 </head>
 <body>
 <div class="roulette-page">
-    <h2 class="start-title">СТАРТ РУЛЕТКИ НАЧИНАЕТСЯ ПОСЛЕ ОКОНЧАНИЯ СЧЕТЧИКА:</h2>
+    @if ($winners->first() !== null)
+        <h2 class="start-title">СТАРТ РУЛЕТКИ НАЧИНАЕТСЯ ПОСЛЕ ОКОНЧАНИЯ СЧЕТЧИКА:</h2>
 
-    <div id="clock">
-        <div class="hours">00</div>
-        <div class="colon">:</div>
-        <div class="minutes">00</div>
-        <div class="colon">:</div>
-        <div class="seconds">00</div>
-    </div>
+        <div id="clock">
+            <div class="hours">00</div>
+            <div class="colon">:</div>
+            <div class="minutes">00</div>
+            <div class="colon">:</div>
+            <div class="seconds">00</div>
+        </div>
+    @else
+        <h2 class="start-title">РОЗЫГРЫШЬ НАЧНЕТСЯ В БЛИЖАЙШЕЕ ВРЕМЯ.</h2>
+    @endif
     <p class="roulette-description">Наша рулетка работает по защищенной системе <strong>"Randomizer"</strong> <br> О ней
         вы можете узнать <a href="https://www.randomizer.org/" class="system-info">тут</a></p>
     <div class="main-block">
@@ -79,7 +83,7 @@
                 </div>
                 <div class="border-win"></div>
             </div>
-            <img src="img/loto/1.png" alt="" class="winner-image">
+            <img src="{{asset('img/loto/1.png')}}" alt="" class="winner-image">
 
 
         </div>
@@ -165,7 +169,7 @@
         var timeinterval = setInterval(updateClock, 1000);
     }
 
-    let endtime = new Date("{{$winners->first()->time}}");
+    let endtime = new Date("{{$winners->first() !== null ? $winners->first()->time : null}}");
     initializeClock("clock", endtime);
 </script>
 </body>

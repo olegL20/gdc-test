@@ -84,7 +84,9 @@ class RegisterController extends Controller
         $balance = new Balance();
         $balance->user_id = $user->id;
         $balance->save();
-        $user->referredUser()->attach(User::find($data['refUser']));
+        if ($data['refUser'] != 0) {
+            $user->referredUser()->attach(User::find($data['refUser']));
+        }
 
         return $user;
     }

@@ -24,7 +24,7 @@
     <section class="light-gradient  main-section">
         <div class="container">
             <div class="main-block">
-                <img src="/img/new-docs.jpg" class="base-page" alt="">
+                <img src="{{asset('img/new-docs.jpg')}}" class="base-page" alt="">
             </div>
         </div>
     </section>

@@ -66,4 +66,23 @@ class RateController extends Controller
 
         return redirect()->route('cabinet');
     }
+
+    public function calculate(Request $request)
+    {
+        $rate = Rate::find($request->id);
+        $perDay = $request->amount * $rate->percent_per_day/100;
+        $profit = $rate->percent_per_day * $request->amount;
+        $total = $profit + $request->amount;
+
+        return response()->json([
+            'perDay' => number_format($perDay, 2),
+            'profit' => number_format($profit, 2),
+            'total' => number_format($total, 2),
+        ]);
+    }
+
+    public function getMin(Request $request)
+    {
+        return Rate::find($request->id)->min_amount;
+    }
 }

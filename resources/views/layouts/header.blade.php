@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('css/owl.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,600,700&amp;subset=cyrillic"
-          rel="stylesheet">
+        rel="stylesheet">
 
 </head>
 <body>
@@ -29,29 +29,32 @@
 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
-                    aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="mainMenu">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link @if (request()->route()->getName() === 'home') active-link @endif" href="/">ГЛАВНАЯ </a>
+                        <a class="nav-link @if (request()->route()->getName() === 'home') active-link @endif"
+                            href="/">{{__('menu.main')}} </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (request()->route()->getName() === 'about') active-link @endif" href="{{route('about')}}">О НАС</a></li>
+                        <a class="nav-link @if (request()->route()->getName() === 'about') active-link @endif"
+                            href="{{route('about')}}">{{__('menu.aboutUs')}}</a></li>
                     <li class="nav-item">
-                        <a class="nav-link @if (request()->route()->getName() === 'faq') active-link @endif" href="{{route('faq')}}">FAQ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'faq') active-link @endif"
+                            href="{{route('faq')}}">{{__('menu.faq')}}</a>
                     </li>
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>--}}
-{{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link @if (request()->route()->getName() === 'news') active-link @endif" href="{{route('news')}}">НОВОСТИ</a>--}}
+                    {{--                    </li>--}}
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link @if (request()->route()->getName() === 'reviews') active-link @endif" href="{{route('reviews')}}">ОТЗЫВЫ</a>--}}
+                    {{--                    </li>--}}
                     <li class="nav-item">
                         <a class="nav-link @if (
                         request()->route()->getName() === 'docs' ||
@@ -60,27 +63,43 @@
                         request()->route()->getName() === 'docsCPI' ||
                         request()->route()->getName() === 'docsGBSRO')
 
-                        ) active-link @endif" href="{{route('docs')}}">ДОКУМЕНТАЦИЯ</a>
+                            ) active-link @endif" href="{{route('docs')}}">{{__('menu.docs')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (request()->route()->getName() === 'contacts') active-link @endif" href="{{route('contacts')}}">КОНТАКТЫ</a>
+                        <a class="nav-link @if (request()->route()->getName() === 'contacts') active-link @endif"
+                            href="{{route('contacts')}}">{{__('menu.contacts')}}</a>
                     </li>
                     @if (!auth()->guest())
                         <li class="nav-item">
-                            <a class="nav-link @if (request()->route()->getName() === 'cabinet') active-link @endif" href="{{route('cabinet')}}">ЛИЧНЫЙ КАБИНЕТ</a>
+                            <a class="nav-link @if (request()->route()->getName() === 'cabinet') active-link @endif"
+                                href="{{route('cabinet')}}">{{__('menu.cabinet')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('logout')}}">Выйти</a>
+                            <a class="nav-link" href="{{route('logout')}}">{{__('menu.logout')}}</a>
                         </li>
                     @endif
                 </ul>
-
-                <select name="" id="" class="change-language">
-                    <option value="ru">Русский</option>
-                    <option value="en">Английский</option>
+                <select name="" id="lang" class="change-language">
+                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                        <option @if(LaravelLocalization::setLocale() === $localeCode) selected
+                            @endif value="{{$localeCode}}">{{$properties['native']}}</option>
+                    @endforeach
                 </select>
 
+                <script type="application/javascript">
+                   let lang = document.getElementById('lang');
+                   lang.onchange = function (e) {
+                        if (e.target.value === 'ru') {
+                            window.location.href = "{{ LaravelLocalization::getLocalizedURL("ru", null, [], true) }}"
+                        } else if (e.target.value === 'en') {
+                            window.location.href = "{{ LaravelLocalization::getLocalizedURL("en", null, [], true) }}"
 
+                        } else {
+                            window.location.href = "{{ LaravelLocalization::getLocalizedURL("zh", null, [], true) }}"
+                        }
+                    }
+
+                </script>
             </div>
         </nav>
 

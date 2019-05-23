@@ -4,18 +4,16 @@
         <div class="container">
             <div class="welcome-text">
                 <h1 class="welcome-title">
-                    Добро пожаловать в GDC Invest
+                    {{__('page.index.1')}}
                 </h1>
                 <div class="welcome-description">
-                    <p>Первое в мире глобальное децентрализованное инвестиционное сообщество, работающее по принципу
-                        распределения инвестиций вкладчиков в различные сферы, трейдинге на биржах и криптобиржах,
-                        выдаче займов и многоуровневого маркетинга.</p>
-                    <p>Наша цель — глобальное доминирование на рынке.</p>
+                    <p>{{__('page.index.2')}}</p>
+                    <p>{{__('page.index.3')}}</p>
                 </div>
                 @if (auth()->guest())
                     <div class="users-block">
-                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
-                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                        <a href="{{route('register')}}" class="btn register">{{__('auth.Register')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('auth.signin')}}</a>
                     </div>
                 @endif
                 <a href="{{route('loto')}}" class="banner">
@@ -25,12 +23,12 @@
                         <p class="description">sponsored by General bytes</p>
                     </div>
                     <div class="banner-arrow-block">
-                        <img src="img/arrow-banner.png" alt="">
+                        <img src="{{asset('img/arrow-banner.png')}}" alt="">
                     </div>
                 </a>
             </div>
             <div class="welcome-image d-none d-xl-block">
-                <img class="content-image" src="img/welcome.png" alt="">
+                <img class="content-image" src="{{asset('img/welcome.png')}}" alt="">
             </div>
         </div>
     </section>
@@ -116,38 +114,34 @@
     </section>
     <section class="light-gradient features">
         <div class="container">
-            <h2 class="section-title features-title">ПОЧЕМУ МЫ?</h2>
+            <h2 class="section-title features-title">{{__('page.index.4')}}</h2>
             <ul class="row features-list">
                 <li class="col-xl-6 features-item">
-                    <img src="img/open-account.png" alt="" class="item-image">
+                    <img src="{{asset('img/open-account.png')}}" alt="" class="item-image">
                     <div class="item-text">
-                        <h4 class="text-title">ОТКРЫТИЕ СЧЕТА</h4>
-                        <p class="text-description">Регистрация займет у вас несколько минут. Все, что Вам необходимо
-                            это заполнить все поля в регистрационной форме.</p>
+                        <h4 class="text-title">{{__('page.index.5')}}</h4>
+                        <p class="text-description">{{__('page.index.6')}}</p>
                     </div>
                 </li>
                 <li class="col-xl-6 features-item">
-                    <img src="img/for-investor.png" alt="" class="item-image">
+                    <img src="{{asset('img/for-investor.png')}}" alt="" class="item-image">
                     <div class="item-text">
-                        <h4 class="text-title">ДЛЯ ИНВЕСТОРОВ</h4>
-                        <p class="text-description">Инвестиции в развитие компании будут приносить Вам стабильный и
-                            постоянный доход. С нами Ваша прибыль составит до 2.4% в день.</p>
+                        <h4 class="text-title">{{__('page.index.7')}}</h4>
+                        <p class="text-description">{{__('page.index.8')}}</p>
                     </div>
                 </li>
                 <li class="col-xl-6 features-item">
-                    <img src="img/for-partners.png" alt="" class="item-image">
+                    <img src="{{asset('img/for-partners.png')}}" alt="" class="item-image">
                     <div class="item-text">
-                        <h4 class="text-title">ДЛЯ ПАРТНЕРОВ</h4>
-                        <p class="text-description">Привлекайте новых инвесторов и зарабатывайте до 10% от вклада ваших
-                            партнеров.</p>
+                        <h4 class="text-title">{{__('page.index.9')}}</h4>
+                        <p class="text-description">{{__('page.index.10')}}</p>
                     </div>
                 </li>
                 <li class="col-xl-6 features-item">
-                    <img src="img/bonus.png" alt="" class="item-image">
+                    <img src="{{asset('img/bonus.png')}}" alt="" class="item-image">
                     <div class="item-text">
-                        <h4 class="text-title">БОНУСЫ</h4>
-                        <p class="text-description">Проводятся постоянные розыгрыши Bitcoin, среди участников
-                            проекта. </p>
+                        <h4 class="text-title">{{__('page.index.11')}}</h4>
+                        <p class="text-description">{{__('page.index.12')}}</p>
                     </div>
                 </li>
             </ul>
@@ -155,33 +149,24 @@
     </section>
     <section class="light-gradient company">
         <div class="container">
-            <h2 class="section-title">О КОМПАНИИ</h2>
+            <h2 class="section-title">{{__('page.index.13')}}</h2>
             <div class="company-content">
                 <div class="company-text">
-                    <h3 class="text-title">Компания GDC Invest</h3>
-                    <p class="text-description">Первое в мире глобальное децентрализованное инвестиционное сообщество,
-                        работающее по принципу распределения инвестиций вкладчиков в различные сферы, трейдинге на
-                        биржах и криптобиржах, выдаче займов и многоуровневого маркетинга. Наша цель — глобальное
-                        доминирование на рынке. Наша платформа объединяет все виды финансовых инструментов и людей
-                        желающих воспользоваться данными финансовыми инструментами для самых различных целей. Это
-                        беспрецедентное событие финансовой эпохи.
+                    <h3 class="text-title">{{__('page.index.14')}}</h3>
+                    <p class="text-description">
+                        {{__('page.index.15')}}
                     </p>
-                    <p class="text-description">GDC Invest позиционируется как микрофинансовая, инвестиционная и
-                        аналитическая организация с продуманной структурой управления, ясными задачами, вполне
-                        достижимыми целями.</p>
-                    <p class="text-description xl-hidden">Компания GDC Invest уникальна в своём роде, это перспективный
-                        механизм с доступным и экономически эффективным маркетинговым подходом. Мы предлагаем ежедневную динамику
-                        процентную ставку от 0.6% до 2.4% в день, а также дополнительные возможности для большего
-                        заработка. Инвестиционные депозиты работают 100 дней.</p>
+                    <p class="text-description">{{__('page.index.16')}}</p>
+                    <p class="text-description xl-hidden">{{__('page.index.17')}}</p>
                     <p class="text-description bold xl-hidden">
-                        Компания GDCinvest - Ваш надежный партнер!</p>
+                       {{__('page.index.18')}}</p>
                     <div class="text-center">
-                        <a href="{{route('about')}}" class="learn-more">УЗНАТЬ ПОДРОБНЕЕ</a>
+                        <a href="{{route('about')}}" class="learn-more">{{__('page.index.19')}}</a>
                     </div>
                 </div>
                 <div class="img-container d-none d-xl-block">
-                    <img src="img/company.png" alt="" class="company-image md-hidden">
-                    <img src="img/md-company.jpg" alt="" class="company-image md-show">
+                    <img src="{{asset('img/company.png')}}" alt="" class="company-image md-hidden">
+                    <img src="{{asset('img/md-company.jpg')}}" alt="" class="company-image md-show">
                 </div>
                 
             </div>
@@ -190,24 +175,24 @@
     </section>
     <section class="statistic">
         <!-- <div class="container"> -->
-        <h2 class="section-title statistic-title">СТАТИСТИКА</h2>
+        <h2 class="section-title statistic-title">{{__('page.index.23')}}</h2>
         <ul class="row statistic-list">
             <li class="col-10  col-sm-7  col-xl-4  statistic-item">
-                <img src="img/people.png" alt="" class="statistic-icon icon-people md-hidden">
-                <img src="img/people-1280.png" alt="" class="statistic-icon icon-people md-show">
-                <div class="statistic-count"><p>С НАМИ УЖЕ:</p>
+                <img src="{{asset('img/people.png')}}" alt="" class="statistic-icon icon-people md-hidden">
+                <img src="{{asset('img/people-1280.png')}}" alt="" class="statistic-icon icon-people md-show">
+                <div class="statistic-count"><p>{{__('page.index.24')}}</p>
                     <p>1 ЧЕЛ.</p></div>
             </li>
             <li class="col-10 col-sm-7  col-xl-4 statistic-item">
-                <img src="img/invest.png" alt="" class="statistic-icon icon-invest md-hidden">
-                <img src="img/invest.png" alt="" class="statistic-icon icon-invest md-show">
-                <div class="statistic-count"><p>ИНВЕСТИРОВАНО:</p>
+                <img src="{{asset('img/invest.png')}}" alt="" class="statistic-icon icon-invest md-hidden">
+                <img src="{{asset('img/invest.png')}}" alt="" class="statistic-icon icon-invest md-show">
+                <div class="statistic-count"><p>{{__('page.index.25')}}</p>
                     <p>0.00$</p></div>
             </li>
             <li class="col-10 col-sm-7  col-xl-4 statistic-item">
-                <img src="img/cash.png" alt="" class="statistic-icon icon-cash md-hidden">
-                <img src="img/cash.png" alt="" class="statistic-icon icon-cash md-show">
-                <div class="statistic-count"><p>ЗАРАБОТАНО:</p>
+                <img src="{{asset('img/cash.png')}}" alt="" class="statistic-icon icon-cash md-hidden">
+                <img src="{{asset('img/invest.png')}}" alt="" class="statistic-icon icon-cash md-show">
+                <div class="statistic-count"><p>{{__('page.index.26')}}</p>
                     <p>0.00$</p></div>
             </li>
         </ul>
@@ -215,27 +200,22 @@
     </section>
     <section class="light-gradient referal">
         <div class="container">
-            <h2 class="section-title">РЕФЕРАЛЬНАЯ ПРОГРАММА</h2>
+            <h2 class="section-title">{{__('page.index.20')}}</h2>
             <div class="row referal-content">
                 <div class="d-none d-xl-block col-xl-6">
-                    <img src="img/referal.png" alt="" class="referal-image md-hidden">
-                    <img src="img/referal-1280.jpg" alt="" class="referal-image md-show">
+                    <img src="{{asset('img/referal.png')}}" alt="" class="referal-image md-hidden">
+                    <img src="{{asset('img/referal-1280.jpg')}}" alt="" class="referal-image md-show">
                 </div>
                 <div class="col-12 col-xl-6 referal-text">
 
-                    <p class="text-description">Реферальная программа разработанная компанией <span class="bold">GDC Invest</span>
-                        - это специальное деловое предложение для наших партнеров. После прохождения процедуры
-                        регистрации на сайте компании, каждый пользователь может стать партнером и автоматически получит
-                        возможность привлекать новых инвесторов для сотрудничества с <span
-                                class="bold">GDC Invest</span>.
+                    <p class="text-description">
 
-
+                        {{__('page.index.21')}}
                     </p>
-                    <p class="text-description">Реферальная программа позволяет партнерам зарабатывать прибыль в размере
-                        от <span class="bold">5%</span> до <span class="bold">10%</span> от суммы депозита, который внес
-                        Ваш реферал на свой личный счет для дальнейшего инвестирования.</p>
+                    <p class="text-description">
+                        {{__('page.index.22')}}</p>
                     <div class="sm-center">
-                        <a href="{{route('partners')}}" class="learn-more">УЗНАТЬ ПОДРОБНЕЕ</a>
+                        <a href="{{route('partners')}}" class="learn-more">{{__('page.index.19')}}</a>
                     </div>
                 </div>
 
@@ -246,11 +226,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
-                <a href="#" class=" sponsors-item"><img src="img/pfmoney.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/payeer.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/comodo.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/qiwi.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/ddos.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>

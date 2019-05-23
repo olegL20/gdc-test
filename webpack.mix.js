@@ -18,4 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/clock.js', 'public/js')
     .js('resources/js/roulette.js', 'public/js')
     .js('resources/js/main.js', 'public/js')
+    .js('resources/js/rates.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');

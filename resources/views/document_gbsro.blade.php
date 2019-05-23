@@ -14,8 +14,8 @@
                 </div>
                 @if (auth()->guest())
                     <div class="users-block">
-                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
-                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                        <a href="{{route('register')}}" class="btn register">{{__('auth.Register')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('auth.signin')}}</a>
                     </div>
                 @endif
             </div>
@@ -30,9 +30,9 @@
         <div class="container">
             <div class="main-block">
 
-                <img src="img/base-gbsro.png" alt="" class="base-page">
-                <img src="img/base-gbsro2.png" alt="" class="base-page">
-                <img src="img/base-gbsro3.png" alt="" class="base-page">
+                <img src="{{asset('img/base-gbsro.png')}}" alt="" class="base-page">
+                <img src="{{asset('img/base-gbsro2.png')}}" alt="" class="base-page">
+                <img src="{{asset('img/base-gbsro3.png')}}" alt="" class="base-page">
 
 
             </div>
@@ -42,11 +42,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
-                <a href="#" class=" sponsors-item"><img src="img/pfmoney.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/payeer.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/comodo.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/qiwi.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/ddos.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>

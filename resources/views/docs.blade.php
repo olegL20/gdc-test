@@ -7,10 +7,12 @@
                     ДОКУМЕНТАЛЬНАЯ БАЗА
                 </h1>
 
-                <div class="users-block">
-                    <a href="" class="btn register">РЕГИСТРАЦИЯ</a>
-                    <a href="" class="btn login">АВТОРИЗАЦИЯ</a>
-                </div>
+                @if (auth()->guest())
+                    <div class="users-block">
+                        <a href="{{route('register')}}" class="btn register">{{__('auth.Register')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('auth.signin')}}</a>
+                    </div>
+                @endif
             </div>
 
         </div>
@@ -23,11 +25,67 @@
 
 
                 <ul class="row base-list">
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="{{asset('img/ii.jpg')}}" alt="" class="title-img">
+                                <div class="title-text">Interactive Investor
+                                </div>
+                            </div>
+                            <div class="item-description">
+                                <p>Certificate (Company Number 319582257)</p>
 
+
+                            </div>
+                            <a href="{{route('docsII')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="{{asset('img/cpi.png')}}" alt="" class="title-img">
+                                <div class="title-text">China Pacific Insurance</div>
+                            </div>
+                            <div class="item-description">
+                                <p>Insurance policy #18613</p>
+
+
+                            </div>
+                            <a href="{{route('docsCPI')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="{{asset('img/cccl.png')}}" alt="" class="title-img">
+                                <div class="title-text">China Communications Construction Ltd</div>
+                            </div>
+                            <div class="item-description">
+                                <p>Договор N 124</p>
+
+
+                            </div>
+                            <a href="{{route('docsCCCL')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-xxl-3 base-item">
+                        <div class="item-container">
+                            <div class="item-title ">
+                                <img src="{{asset('img/gbsro.png')}}" alt="" class="title-img">
+                                <div class="title-text">General Bytes S.R.O</div>
+                            </div>
+                            <div class="item-description">
+                                <p>Договор №4182</p>
+
+
+                            </div>
+                            <a href="{{route('docsGBSRO')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                        </div>
+                    </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/usa.svg" alt="" class="title-img">
+                                <img src="{{asset('img/usa.svg')}}" alt="" class="title-img">
                                 <div class="title-text">США</div>
                             </div>
                             <div class="item-description">
@@ -41,7 +99,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/england.svg" alt="" class="title-img">
+                                <img src="{{asset('img/england.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Англия</div>
                             </div>
                             <div class="item-description">
@@ -57,7 +115,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/scotland.svg" alt="" class="title-img">
+                                <img src="{{asset('img/scotland.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Шотландия</div>
                             </div>
                             <div class="item-description">
@@ -72,7 +130,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/wales.svg" alt="" class="title-img">
+                                <img src="{{asset('img/wales.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Уэльс</div>
                             </div>
                             <div class="item-description">
@@ -88,7 +146,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/ireland.svg" alt="" class="title-img">
+                                <img src="{{asset('img/ireland.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Северная Ирландия</div>
                             </div>
                             <div class="item-description">
@@ -104,7 +162,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/australia.svg" alt="" class="title-img">
+                                <img src="{{asset('img/australia.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Австралия</div>
                             </div>
                             <div class="item-description">
@@ -119,7 +177,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/canada.svg" alt="" class="title-img">
+                                <img src="{{asset('img/canada.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Канада</div>
                             </div>
                             <div class="item-description">
@@ -134,7 +192,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/new_zealand.svg" alt="" class="title-img">
+                                <img src="{{asset('img/new_zealand.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Новая
                                     Зеландия
                                 </div>
@@ -151,7 +209,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/uar.svg" alt="" class="title-img">
+                                <img src="{{asset('img/uar.svg')}}" alt="" class="title-img">
                                 <div class="title-text">ЮАР</div>
                             </div>
                             <div class="item-description">
@@ -165,7 +223,7 @@
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
-                                <img src="img/hongkong.svg" alt="" class="title-img">
+                                <img src="{{asset('img/hongkong.svg')}}" alt="" class="title-img">
                                 <div class="title-text">Гонконг</div>
                             </div>
                             <div class="item-description">
@@ -176,63 +234,7 @@
                             <a href="https://www.icris.cr.gov.hk/csci/" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
                         </div>
                     </li>
-                    <li class="col-12 col-md-6 col-xxl-3 base-item">
-                        <div class="item-container">
-                            <div class="item-title ">
-                                <img src="img/ii.jpg" alt="" class="title-img">
-                                <div class="title-text">Interactive Investor
-                                </div>
-                            </div>
-                            <div class="item-description">
-                                <p>Certificate (Company Number 319582257)</p>
 
-
-                            </div>
-                            <a href="{{route('docsII')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
-                        </div>
-                    </li>
-                    <li class="col-12 col-md-6 col-xxl-3 base-item">
-                        <div class="item-container">
-                            <div class="item-title ">
-                                <img src="img/cpi.png" alt="" class="title-img">
-                                <div class="title-text">China Pacific Insurance</div>
-                            </div>
-                            <div class="item-description">
-                                <p>Insurance policy #18613</p>
-
-
-                            </div>
-                            <a href="{{route('docsCPI')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
-                        </div>
-                    </li>
-                    <li class="col-12 col-md-6 col-xxl-3 base-item">
-                        <div class="item-container">
-                            <div class="item-title ">
-                                <img src="img/cccl.png" alt="" class="title-img">
-                                <div class="title-text">China Communications Construction Ltd</div>
-                            </div>
-                            <div class="item-description">
-                                <p>Договор N 124</p>
-
-
-                            </div>
-                            <a href="{{route('docsCCCL')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
-                        </div>
-                    </li>
-                    <li class="col-12 col-md-6 col-xxl-3 base-item">
-                        <div class="item-container">
-                            <div class="item-title ">
-                                <img src="img/gbsro.png" alt="" class="title-img">
-                                <div class="title-text">General Bytes S.R.O</div>
-                            </div>
-                            <div class="item-description">
-                                <p>Договор №4182</p>
-
-
-                            </div>
-                            <a href="{{route('docsGBSRO')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
-                        </div>
-                    </li>
                 </ul>
 
 
@@ -243,11 +245,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
-                <a href="#" class=" sponsors-item"><img src="img/pfmoney.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/payeer.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/comodo.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/qiwi.png" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="img/ddos.png" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>
