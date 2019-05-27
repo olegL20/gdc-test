@@ -42,7 +42,7 @@ class CabinetController extends Controller
     public function balance(User $user)
     {
         $quickCheckout = new QuickCheckout([
-            'pay_to_email' => 'demoqco@sun-fish.com',
+            'pay_to_email' => 'egpesk2@mail.ru',
         ]);
 
         $quickCheckout->setReturnUrl(route('skrill-callback'));

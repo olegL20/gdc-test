@@ -4,7 +4,7 @@
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
-                    РАССЧИТАЙТЕ СВОЮ ПРИБЫЛЬ
+                    {{__('page.calculate.1')}}
                 </h1>
 
             </div>
@@ -20,7 +20,7 @@
                     <h2 class="rate-title">Выберите интересующий вас тариф:</h2>
                     <div class="button-group">
                         @foreach($rates as $rate)
-                            <button class="calculate-option @if ($rates->first()->id === $rate->id ) active @endif" data-id="{{$rate->id}}" id="option-{{$rate->id}}">{{$rate->title}}</button>
+                            <button class="calculate-option @if ($rates->first()->id === $rate->id ) active @endif" data-id="{{$rate->id}}" id="option-{{$rate->id}}">{{$rate->getTitle()}}</button>
                         @endforeach
                     </div>
                     <div class="invest-steps">
@@ -29,17 +29,17 @@
                                 <p class="step-title">01. Выберите валюту инвестирования:</p>
                                 <div class="currency-group">
                                     <div class="currency-item">
-                                        <input type="radio" checked name="currency-value" id="cur-1"><label for="cur-1"
+                                        <input type="radio" value="RUB" checked name="currency-value" id="cur-1"><label for="cur-1"
                                             class="currency-title">Рубль</label>
                                     </div>
                                     {{--                                    <div class="currency-item">--}}
                                     {{--                                        <input type="radio" name="currency-value" id="cur-2"><label for="cur-2"--}}
                                     {{--                                            class="currency-title">Евро</label>--}}
                                     {{--                                    </div>--}}
-                                    {{--                                    <div class="currency-item">--}}
-                                    {{--                                        <input type="radio" name="currency-value" id="cur-3"><label for="cur-3"--}}
-                                    {{--                                            class="currency-title">Доллар</label>--}}
-                                    {{--                                    </div>--}}
+                                                                        <div class="currency-item">
+                                                                            <input type="radio" value="USD" name="currency-value" id="cur-3"><label for="cur-3"
+                                                                                class="currency-title">Доллар</label>
+                                                                        </div>
                                 </div>
                                 <div class="currency-group">
                                     {{--                                    <div class="currency-item">--}}
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                            <a href="#accordion" class="calculate">{{__('page.calculate.2')}}</a>
                         </div>
 
                     </div>
@@ -94,19 +94,19 @@
 
                                     <button class="btn-collapse @if ($rates->first()->id !== $rate->id) collapsed @endif" data-toggle="collapse" data-target="#collapse{{$rate->id}}"
                                         aria-expanded="false" aria-controls="collapse{{$rate->id}}">
-                                        ТАРИФ «{{$rate->title}}»
+                                        ТАРИФ «{{$rate->getTitle()}}»
                                     </button>
 
 
                                     <div id="collapse{{$rate->id}}" class="collapse @if ($rates->first()->id === $rate->id) show @endif" aria-labelledby="headingTwo"
                                         data-parent="#accordion">
                                         <div class="card-body">
-                                            <p class="description">{{$rate->description}}</p>
+                                            <p class="description">{{$rate->getDescription()}}</p>
                                             <ul class="parameter-list">
-                                                <li class="parameter-item"><b class="title">Депозит:</b> От {{$rate->min_amount}}
+                                                <li class="parameter-item"><b class="title">{{__('page.calculate.7')}}:</b> От {{$rate->min_amount}} RUB
                                                 </li>
-                                                <li class="parameter-item"><b class="title">Ставка:</b> {{$rate->percent_per_day}}% в день</li>
-                                                <li class="parameter-item"><b class="title">Период:</b> {{$rate->days}} дней</li>
+                                                <li class="parameter-item"><b class="title">{{__('page.calculate.4')}}:</b> {{$rate->percent_per_day}}% {{__('page.calculate.11')}}</li>
+                                                <li class="parameter-item"><b class="title">{{__('page.calculate.6')}}:</b> {{$rate->days}} {{__('page.calculate.12')}}</li>
                                                 <li class="parameter-item"><b class="title">Рефовод получает {{$rate->referral_percent}}%</b></li>
                                                 <li class="parameter-item"><b class="title">Распределённые
                                                         инвестиции</b>
@@ -114,7 +114,7 @@
                                             </ul>
                                             <div class="note">*Примечание касательно страховки</div>
 
-                                            <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                                            <a href="#accordion" class="calculate">{{__('page.calculate.1')}}</a>
 
                                         </div>
                                     </div>
@@ -130,16 +130,16 @@
 
                                     <button class="btn-collapse @if ($rates->first()->id !== $rate->id) collapsed @endif" data-toggle="collapse" data-target="#collapse{{$rate->id+10}}"
                                         aria-expanded="false" aria-controls="collapse{{$rate->id+10}}">
-                                        ТАРИФ «{{$rate->title}}»
+                                        ТАРИФ «{{$rate->getTitle()}}»
                                     </button>
 
 
                                     <div id="collapse{{$rate->id+10}}" class="collapse @if ($rates->first()->id === $rate->id) show @endif" aria-labelledby="headingTwo"
                                         data-parent="#accordion">
                                         <div class="card-body">
-                                            <p class="description">{{$rate->description}}</p>
+                                            <p class="description">{{$rate->getDescription()}}</p>
                                             <ul class="parameter-list">
-                                                <li class="parameter-item"><b class="title">Депозит:</b> От {{$rate->min_amount}}
+                                                <li class="parameter-item"><b class="title">Депозит:</b> От {{$rate->getAmountForUSD()}} USD
                                                 </li>
                                                 <li class="parameter-item"><b class="title">Ставка:</b> {{$rate->percent_per_day}}% в день</li>
                                                 <li class="parameter-item"><b class="title">Период:</b> {{$rate->days}} дней</li>
@@ -150,7 +150,7 @@
                                             </ul>
                                             <div class="note">*Примечание касательно страховки</div>
 
-                                            <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                                            <a href="#accordion" class="calculate">{{__('page.calculate.1')}}</a>
 
                                         </div>
                                     </div>
@@ -168,14 +168,14 @@
 
                                     <button class="btn-collapse @if ($rates->first()->id !== $rate->id) collapsed @endif" data-toggle="collapse" data-target="#collapse{{$rate->id+20}}"
                                         aria-expanded="false" aria-controls="collapse{{$rate->id+20}}">
-                                        ТАРИФ «{{$rate->title}}»
+                                        ТАРИФ «{{$rate->getTitle()}}»
                                     </button>
 
 
                                     <div id="collapse{{$rate->id+20}}" class="collapse @if ($rates->first()->id === $rate->id) show @endif" aria-labelledby="headingTwo"
                                         data-parent="#accordion">
                                         <div class="card-body">
-                                            <p class="description">{{$rate->description}}</p>
+                                            <p class="description">{{$rate->getDescription()}}</p>
                                             <ul class="parameter-list">
                                                 <li class="parameter-item"><b class="title">Депозит:</b> От {{$rate->min_amount}}
                                                 </li>
@@ -188,7 +188,7 @@
                                             </ul>
                                             <div class="note">*Примечание касательно страховки</div>
 
-                                            <a href="#accordion" class="calculate">РАССЧИТАТЬ ПРИБЫЛЬ</a>
+                                            <a href="#accordion" class="calculate">{{__('page.calculate.1')}}</a>
 
                                         </div>
                                     </div>

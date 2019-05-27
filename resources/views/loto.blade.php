@@ -19,7 +19,7 @@
             <div class="seconds">00</div>
         </div>
     @else
-        <h2 class="start-title">РОЗЫГРЫШЬ НАЧНЕТСЯ В БЛИЖАЙШЕЕ ВРЕМЯ.</h2>
+        <h2 class="start-title">РОЗЫГРЫШ НАЧНЕТСЯ В БЛИЖАЙШЕЕ ВРЕМЯ.</h2>
     @endif
     <p class="roulette-description">Наша рулетка работает по защищенной системе <strong>"Randomizer"</strong> <br> О ней
         вы можете узнать <a href="https://www.randomizer.org/" class="system-info">тут</a></p>

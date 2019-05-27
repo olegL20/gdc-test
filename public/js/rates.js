@@ -96,10 +96,12 @@
 $(document).ready(function () {
   function getMin() {
     var rate = $('.active')[0].getAttribute('data-id');
+    var cur = $('input[name="currency-value"]:checked').val();
     $.get({
       url: '/api/rates/get-min',
       data: {
-        id: rate
+        id: rate,
+        cur: cur
       },
       success: function success(data) {
         $('input[type="range"]')[0].setAttribute('min', data);
@@ -125,14 +127,20 @@ $(document).ready(function () {
   $('input[type="number"]').change(function (e) {
     getData(e.target.value);
   });
+  $('input[name="currency-value"]').change(function (e) {
+    getMin();
+    getData();
+  });
 
   function getData() {
     var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : $('input[type="number"]').val();
     var rate = $('.active')[0].getAttribute('data-id');
+    var cur = $('input[name="currency-value"]:checked').val();
     $.get({
       url: '/api/rates/calculate',
       data: {
         amount: value,
+        currency: cur,
         id: rate
       },
       success: function success(data) {

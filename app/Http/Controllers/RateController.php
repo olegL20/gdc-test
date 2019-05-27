@@ -83,6 +83,10 @@ class RateController extends Controller
 
     public function getMin(Request $request)
     {
-        return Rate::find($request->id)->min_amount;
+        if ($request->get('cur') === 'RUB') {
+            return Rate::find($request->id)->min_amount;
+        }
+
+        return Rate::find($request->id)->getAmountForUSD();
     }
 }

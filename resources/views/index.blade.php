@@ -35,21 +35,21 @@
     <section class="clip-section light-gradient"></section>
     <section class="light-gradient  offers">
         <div class="container">
-            <h2 class="section-title offers-title">МЫ ПРЕДЛАГАЕМ</h2>
+            <h2 class="section-title offers-title">{{__('page.calculate.10')}}</h2>
             <ul class="owl-carousel offers-list">
                 @foreach($rates as $rate)
                     @if($rate->title != 'Партнер')
                     <li class="offers-item">
-                        <h3 class="item-title">{{$rate->title}}</h3>
-                        <h4 class="item-subtitle">ПРОЦЕНТ</h4>
-                        <p class="subtitle-description">{{$rate->percent_per_day}}% В ДЕНЬ</p>
-                        <h4 class="item-subtitle">ПЕРИОД</h4>
-                        <p class="subtitle-description">{{$rate->days}} ДНЕЙ</p>
-                        <h4 class="item-subtitle">СУММА</h4>
-                        <p class="subtitle-description">от {{$rate->min_amount.' '.$rate->currency}}</p>
-                        <h4 class="item-subtitle">ТЕЛО ДЕПОЗИТА</h4>
-                        <p class="subtitle-description">ВКЛЮЧЕНО В ВЫПЛАТЫ</p>
-                        <a href="" class="make-contribution">СДЕЛАТЬ ВКЛАД</a>
+                        <h3 class="item-title">{{$rate->getTitle()}}</h3>
+                        <h4 class="item-subtitle">{{__('page.calculate.4')}}</h4>
+                        <p class="subtitle-description">{{$rate->percent_per_day}}% {{__('page.calculate.11')}}</p>
+                        <h4 class="item-subtitle">{{__('page.calculate.6')}}</h4>
+                        <p class="subtitle-description">{{$rate->days}} {{__('page.calculate.12')}}</p>
+                        <h4 class="item-subtitle">{{__('page.calculate.5')}}</h4>
+                        <p class="subtitle-description">{{__('page.calculate.13')}} {{$rate->min_amount.' '.$rate->currency}}</p>
+                        <h4 class="item-subtitle">{{__('page.calculate.7')}}</h4>
+                        <p class="subtitle-description">{{__('page.calculate.9')}}</p>
+                        <a href="" class="make-contribution">{{__('page.calculate.8')}}</a>
                     </li>
                     @endif
                 @endforeach
@@ -107,8 +107,8 @@
 {{--                </li>--}}
             </ul>
             <div class="text-center d-none d-xl-block">
-                <a href="{{route('calculator')}}" class="calculate-profit mr-2">РАССЧИТАТЬ ПРИБЫЛЬ</a>
-                <a href="/profit-calculator#rates" class="calculate-profit all-rate">Все тарифы</a>
+                <a href="{{route('calculator')}}" class="calculate-profit mr-2">{{__('page.calculate.2')}}</a>
+                <a href="/profit-calculator#rates" class="calculate-profit all-rate">{{__('page.calculate.3')}}</a>
             </div>
         </div>
     </section>

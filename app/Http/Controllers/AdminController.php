@@ -40,13 +40,15 @@ class AdminController extends Controller
     public function sendVerifyLink(User $user, Request $request)
     {
         $refUser = $user->referredUser;
-        $refUser->first()->balance->increaseBalance(User::MoneyForInvite);
-        $transaction = new Transaction();
-        $transaction->type = Transaction::REF_REWARD;
-        $transaction->amount = User::MoneyForInvite;
-        $transaction->user_id = $refUser->first()->id;
-        $transaction->balance = $refUser->first()->balance->getRealBalance();
-        $transaction->save();
+        if ($refUser->first()) {
+            $refUser->first()->balance->increaseBalance(User::MoneyForInvite);
+            $transaction = new Transaction();
+            $transaction->type = Transaction::REF_REWARD;
+            $transaction->amount = User::MoneyForInvite;
+            $transaction->user_id = $refUser->first()->id;
+            $transaction->balance = $refUser->first()->balance->getRealBalance();
+            $transaction->save();
+        }
         $user->verification(!$request->has('decline') || $request->has('verify'));
         $refferal = new ReferralLink();
         $refferal->user()->associate($user);

@@ -16,6 +16,7 @@
         "mcamara/laravel-localization": "^1.3",
         "pdazcom/laravel-referrals": "^0.2.1",
         "tmyers273/laravel-stripe-billing": "^1.5",
+        "zhooravell/skrill-php-client": "^0.0.1",
         "zvook/php-skrill-quick-checkout": "^1.0"
     },
     "require-dev": {

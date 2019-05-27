@@ -4,7 +4,7 @@
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
-                    ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
+                    {{__('page.faq.50')}}
                 </h1>
 
                 @if (auth()->guest())
