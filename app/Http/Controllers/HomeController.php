@@ -27,7 +27,8 @@ class HomeController extends Controller
 
     public function partners()
     {
-        return view('partners');
+        $rate = Rate::where('title', "Партнер")->first();
+        return view('partners')->with('rate', $rate);
     }
 
     public function contacts()

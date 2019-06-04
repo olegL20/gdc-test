@@ -37,6 +37,7 @@ Route::get('/profit-calculator', 'HomeController@calculation')->name('calculator
 
 
 Route::get('/cabinet', 'CabinetController@index')->middleware(['auth'])->name('cabinet');
+Route::get('/cabinet/withdraw', 'CabinetController@withdraw')->middleware(['auth'])->name('withdraw');
 Route::get('/admin', 'AdminController@index')->middleware(['auth', 'admin'])->name('admin');
 Route::get('/admin/users', 'AdminController@users')->middleware(['auth', 'admin'])->name('admin.users');
 Route::get('/admin/transactions', 'AdminController@transactions')->middleware(['auth', 'admin'])->name('admin.transactions');
@@ -56,3 +57,7 @@ Route::any('/skrill-callback', 'CabinetController@callbackSkrill')->name('skrill
 Route::get('/payment-succeed', function () {
     return view('pages.success');
 })->name('successful-payment');
+
+Route::get('/status', 'PayeerController@status')->name('payeer-status');
+Route::get('/success', 'PayeerController@success')->name('payeer-success');
+Route::get('/fail', 'PayeerController@fail')->name('payeer-fail');

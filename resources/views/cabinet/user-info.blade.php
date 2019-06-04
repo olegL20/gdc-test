@@ -48,7 +48,7 @@
             <div class="balance-title">Баланс:</div>
 
             <div class="balance-value">{{$user->balance->getRealBalance()}} RUB</div>
-            <button disabled class="get-cash disabled">Вывод средств</button>
+            <a href="{{route('withdraw')}}" class="get-cash disabled">Вывод средств</a>
             <a href="{{route('balance', ['user' => $user])}}" class="get-cash">Пополнить
                 баланс</a>
         </div>

@@ -103,6 +103,15 @@
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
       <path value="$PROJECT_DIR$/vendor/pdazcom/laravel-referrals" />
       <path value="$PROJECT_DIR$/vendor/zvook/php-skrill-quick-checkout" />
+      <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
+      <path value="$PROJECT_DIR$/vendor/zhooravell/skrill-php-client" />
+      <path value="$PROJECT_DIR$/vendor/moneyphp/money" />
+      <path value="$PROJECT_DIR$/vendor/gerardojbaez/money" />
+      <path value="$PROJECT_DIR$/vendor/danielme85/laravel-cconverter" />
+      <path value="$PROJECT_DIR$/vendor/akibtanjim/currency-converter" />
+      <path value="$PROJECT_DIR$/vendor/florianv/exchanger" />
+      <path value="$PROJECT_DIR$/vendor/florianv/swap" />
+      <path value="$PROJECT_DIR$/vendor/florianv/laravel-swap" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

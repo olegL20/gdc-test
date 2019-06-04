@@ -8,8 +8,8 @@
                 </h1>
                 @if (auth()->guest())
                     <div class="users-block">
-                        <a href="{{route('register')}}" class="btn register">{{__('auth.Register')}}</a>
-                        <a href="{{route('login')}}" class="btn login">{{__('auth.signin')}}</a>
+                        <a href="{{route('register')}}" class="btn register">{{__('page.btn.1')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('page.btn.2')}}</a>
                     </div>
                 @endif
             </div>
@@ -26,9 +26,14 @@
                             <p style="justify-content: center;font-size: 20px;margin-bottom: 15px;">{{__('page.contacts.2')}}
                             </p>
                             <h1 style="    font-size: 1.5em;    font-style: oblique;">{{__('page.contacts.1')}}</h1>
-                            <p style="margin-bottom: 10px; font-size: 1.2em;">+85258010932</p>
-                            <p style="margin-bottom: 10px; font-size: 1.2em;">+85258080723</p>
-                            <p style="margin-bottom: 10px; font-size: 1.2em;">+74951080929</p>
+                            @if (request()->getHost() !== 'gdc-invest.net')
+                                <p style="margin-bottom: 10px; font-size: 1.2em;">+74959759493</p>
+                                <p style="margin-bottom: 10px; font-size: 1.2em;">+85258080723</p>
+                            @else
+                                <p style="margin-bottom: 10px; font-size: 1.2em;">+74951080929</p>
+                                <p style="margin-bottom: 10px; font-size: 1.2em;">+85258010932</p>
+                            @endif
+
                         </div>
                         <div class="col-xl-6 col-xxl-8">
                             <div class="row">
@@ -71,11 +76,12 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
+                <a href="#" style="width: 250px;" class=" sponsors-item"><img src="{{asset('img/visa.png')}}"
+                        alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/mastercard.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>

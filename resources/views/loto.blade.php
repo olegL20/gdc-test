@@ -19,46 +19,15 @@
             <div class="seconds">00</div>
         </div>
     @else
-        <h2 class="start-title">РОЗЫГРЫШ НАЧНЕТСЯ В БЛИЖАЙШЕЕ ВРЕМЯ.</h2>
+        <h2 class="start-title">{{__('page.roulette.2')}}</h2>
     @endif
-    <p class="roulette-description">Наша рулетка работает по защищенной системе <strong>"Randomizer"</strong> <br> О ней
-        вы можете узнать <a href="https://www.randomizer.org/" class="system-info">тут</a></p>
+    <p class="roulette-description">{{__('page.roulette.3')}} <strong>"Randomizer"</strong> <br> {{__('page.roulette.6')}} <a href="https://www.randomizer.org/" class="system-info">{{__('page.roulette.7')}}</a></p>
     <div class="main-block">
-        <div class="roulette-block btc-block" id="popup-btc">
-            <h2 class="title">КОЛИЧЕСТВО BTC ПОБЕДИТЕЛЯ:</h2>
-            <div class="btc-name">BTC:
-                <ul class="winners" style="display: none">
-                    @foreach($winners as $winner)
-                        <li>{{$winner->amount}}</li>
-                    @endforeach
-                </ul>
-            </div>
-            <div class="roulette-container">
-                <div class="main-roulette-array" id="rollBtc">
-                    <div class="roulette-item">0.00321</div>
-                    <div class="roulette-item">0.00235</div>
-                    <div class="roulette-item">0.00241</div>
-                    <div class="roulette-item">0.00333</div>
-                    <div class="roulette-item">0.00333</div>
-                    <div class="roulette-item">0.00329</div>
-                    <div class="roulette-item">0.00238</div>
-                    <div class="roulette-item">0.00247</div>
-                    <div class="roulette-item">0.00336</div>
-                    <div class="roulette-item">0.00330</div>
-                    <div class="roulette-item">0.00330</div>
-
-                </div>
-                <div class="border-win"></div>
-            </div>
-
-
-        </div>
-
         <div class="roulette-block winner-block" id="popup-winner">
-            <h2 class="title">ИМЯ И НОМЕР ПОБЕДИТЕЛЯ:</h2>
+            <h2 class="title">{{strtoupper(__('page.roulette.5'))}}</h2>
             <ul class="winners" style="display: none">
                 @foreach($winners as $winner)
-                    <li><h3>{{$winner->user->getFullName().' '.$winner->user->id}}</h3></li>
+                    <li><h3>{{strtoupper($winner->user->getFullName().' '.$winner->user->id)}}</h3></li>
                 @endforeach
             </ul>
 
@@ -87,6 +56,37 @@
 
 
         </div>
+
+        <div class="roulette-block btc-block" id="popup-btc">
+            <h2 class="title">{{strtoupper(__('page.roulette.4'))}}:</h2>
+            <div class="btc-name">BTC:
+                <ul class="winners" style="display: none">
+                    @foreach($winners as $winner)
+                        <li>{{$winner->amount}}</li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="roulette-container">
+                <div class="main-roulette-array" id="rollBtc">
+                    <div class="roulette-item">0.00321</div>
+                    <div class="roulette-item">0.00235</div>
+                    <div class="roulette-item">0.00241</div>
+                    <div class="roulette-item">0.00333</div>
+                    <div class="roulette-item">0.00333</div>
+                    <div class="roulette-item">0.00329</div>
+                    <div class="roulette-item">0.00238</div>
+                    <div class="roulette-item">0.00247</div>
+                    <div class="roulette-item">0.00336</div>
+                    <div class="roulette-item">0.00330</div>
+                    <div class="roulette-item">0.00330</div>
+
+                </div>
+                <div class="border-win"></div>
+            </div>
+
+
+        </div>
+
     </div>
 
 

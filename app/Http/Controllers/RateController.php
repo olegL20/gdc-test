@@ -27,6 +27,13 @@ class RateController extends Controller
     public function investRate(Rate $rate, Request $request)
     {
         $user = $request->user();
+        if ($rate->title === 'Партнер') {
+            $rate->user()->attach($user, [
+                'invested_amount' => 0,
+                'created_at' => Carbon::now(),
+            ]);
+            return back();
+        }
         if ($user->balance->getRealBalance() < $rate->min_amount) {
             return back()->withErrors([
                 'amount' => 'На балансе недостаточно средств'

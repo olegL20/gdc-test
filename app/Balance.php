@@ -21,6 +21,6 @@ class Balance extends Model
 
     public function getRealBalance(): float
     {
-        return ($this->amount - $this->locked_amount);
+        return number_format(($this->amount - $this->locked_amount), 2, '.', ' ');
     }
 }

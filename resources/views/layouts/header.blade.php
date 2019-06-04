@@ -79,12 +79,15 @@
                         </li>
                     @endif
                 </ul>
-                <select name="" id="lang" class="change-language">
+                <ul>
                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                        <option @if(LaravelLocalization::setLocale() === $localeCode) selected
-                            @endif value="{{$localeCode}}">{{$properties['native']}}</option>
+                        <li>
+                            <a style="display: inline-flex; margin-top: 2%" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                <img src="{{asset('img/flags/'.$localeCode.'.png')}}"> {{ $properties['native'] }}
+                            </a>
+                        </li>
                     @endforeach
-                </select>
+                </ul>
 
                 <script type="application/javascript">
                    let lang = document.getElementById('lang');

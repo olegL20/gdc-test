@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/rates/calculate', 'RateController@calculate');
 Route::get('/rates/get-min', 'RateController@getMin');
+Route::get('/generate-form', 'PayeerController@getSign');

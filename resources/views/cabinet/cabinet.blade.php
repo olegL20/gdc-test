@@ -71,7 +71,7 @@
                                         <tbody>
                                         @foreach($user->rates()->get(['rates.title', 'rates.percent_per_day', 'invested_amount', 'rate_user.created_at']) as $rate)
                                             <tr>
-                                                <td>{{$rate->title}}</td>
+                                                <td>{{$rate->getTitle()}}</td>
                                                 <td>{{(new \Carbon\Carbon($rate->created_at))->format('d.m.Y')}}</td>
                                                 <td>{{$rate->invested_amount +
                                                 $rate->invested_amount*($rate->percent_per_day/100)*\Carbon\Carbon::now()->diffInDays((new \Carbon\Carbon($rate->created_at))->format('d.m.Y'))}}</td>
@@ -103,7 +103,7 @@
                                                         data-target="#collapse{{$key+1}}"
                                                         aria-expanded="false"
                                                         aria-controls="collapse{{$key+1}}">
-                                                        ТАРИФ «{{$rate->title}}»
+                                                        ТАРИФ «{{$rate->getTitle()}}»
                                                     </button>
 
 
@@ -112,12 +112,12 @@
                                                         aria-labelledby="headingTwo"
                                                         data-parent="#accordion">
                                                         <div class="card-body">
-                                                            <p class="description">{{$rate->description}}</p>
-                                                            @if($rate->title != 'Партнер')
+                                                            <p class="description">{{$rate->getDescription()}}</p>
+                                                            @if($rate->getTitle() != 'Партнер')
                                                                 <ul class="parameter-list">
                                                                     <li class="parameter-item">
                                                                         <b class="title">Депозит:</b> От
-                                                                        {{$rate->min_amount}}
+                                                                        {{$rate->getMinAmount()}}
                                                                     </li>
                                                                     <li class="parameter-item">
                                                                         <b class="title">Ставка:</b> {{$rate->percent_per_day}}
@@ -135,11 +135,10 @@
                                                                 </ul>
                                                             @endif
 
-                                                            <div class="note">*Примечание касательно страховки</div>
+                                                            <div class="note">*{{__('page.calculate.88')}}</div>
 
                                                             <div class="button-group">
-                                                                <a href="#accordion" class="calculate">РАССЧИТАТЬ
-                                                                    ПРИБЫЛЬ</a>
+                                                                <a href="{{route('calculator')}}" class="calculate">{{__('page.calculate.2')}}</a>
                                                                 <a href="{{route('invest', ['rate' => $rate])}}"
                                                                     class="invest">ИНВЕСТИРОВАТЬ</a>
                                                             </div>
@@ -162,7 +161,7 @@
                                                         data-target="#collapse{{$key+10}}"
                                                         aria-expanded="false"
                                                         aria-controls="collapse{{$key+10}}">
-                                                        ТАРИФ «{{$rate->title}}»
+                                                        ТАРИФ «{{$rate->getTitle()}}»
                                                     </button>
 
 
@@ -171,12 +170,12 @@
                                                         aria-labelledby="headingTwo"
                                                         data-parent="#accordion">
                                                         <div class="card-body">
-                                                            <p class="description">{{$rate->description}}</p>
-                                                            @if($rate->title != 'Партнер')
+                                                            <p class="description">{{$rate->getDescription()}}</p>
+                                                            @if($rate->getTitle() != 'Партнер')
                                                                 <ul class="parameter-list">
                                                                     <li class="parameter-item">
                                                                         <b class="title">Депозит:</b> От
-                                                                        {{$rate->min_amount}}
+                                                                        {{$rate->getMinAmount()}}
                                                                     </li>
                                                                     <li class="parameter-item">
                                                                         <b class="title">Ставка:</b> {{$rate->percent_per_day}}
@@ -193,12 +192,12 @@
                                                                             инвестиции</b></li>
                                                                 </ul>
                                                             @endif
-                                                            <div class="note">*Примечание касательно страховки</div>
+                                                            <div class="note">*{{__('page.calculate.88')}}</div>
                                                             @if (session('errors'))
                                                                 <div class="note">{{session('errors')->first('amount')}}</div>
                                                             @endif
                                                             <div class="button-group">
-                                                                <a href="#accordion" class="calculate">РАССЧИТАТЬ
+                                                                <a href="{{route('calculator')}}" class="calculate">РАССЧИТАТЬ
                                                                     ПРИБЫЛЬ</a>
                                                                 <a href="{{route('invest', ['rate' => $rate])}}"
                                                                     class="invest">ИНВЕСТИРОВАТЬ</a>
@@ -223,7 +222,7 @@
                                                         data-target="#collapse{{$key+20}}"
                                                         aria-expanded="false"
                                                         aria-controls="collapse{{$key+20}}">
-                                                        ТАРИФ «{{$rate->title}}»
+                                                        ТАРИФ «{{$rate->getTitle()}}»
                                                     </button>
 
 
@@ -232,12 +231,12 @@
                                                         aria-labelledby="headingTwo"
                                                         data-parent="#accordion">
                                                         <div class="card-body">
-                                                            <p class="description">{{$rate->description}}</p>
-                                                            @if($rate->title != 'Партнер')
+                                                            <p class="description">{{$rate->getDescription()}}</p>
+                                                            @if($rate->getTitle() != 'Партнер')
                                                                 <ul class="parameter-list">
                                                                     <li class="parameter-item">
                                                                         <b class="title">Депозит:</b> От
-                                                                        {{$rate->min_amount}}
+                                                                        {{$rate->getMinAmount()}}
                                                                     </li>
                                                                     <li class="parameter-item">
                                                                         <b class="title">Ставка:</b> {{$rate->percent_per_day}}
@@ -254,13 +253,13 @@
                                                                             инвестиции</b></li>
                                                                 </ul>
                                                             @endif
-                                                            <div class="note">*Примечание касательно страховки</div>
+                                                            <div class="note">*{{__('page.calculate.88')}}</div>
 
                                                             @if (session('errors'))
                                                                 <div class="note">{{session('errors')->first('amount')}}</div>
                                                             @endif
                                                             <div class="button-group">
-                                                                <a href="#accordion" class="calculate">РАССЧИТАТЬ
+                                                                <a href="{{route('calculator')}}" class="calculate">РАССЧИТАТЬ
                                                                     ПРИБЫЛЬ</a>
                                                                 <a href="{{route('invest', ['rate' => $rate])}}"
                                                                     class="invest">ИНВЕСТИРОВАТЬ</a>

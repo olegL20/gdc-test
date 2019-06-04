@@ -112,7 +112,7 @@
                                                         инвестиции</b>
                                                 </li>
                                             </ul>
-                                            <div class="note">*Примечание касательно страховки</div>
+                                            <div class="note">*{{__('page.calculate.88')}}</div>
 
                                             <a href="#accordion" class="calculate">{{__('page.calculate.1')}}</a>
 
@@ -148,7 +148,7 @@
                                                         инвестиции</b>
                                                 </li>
                                             </ul>
-                                            <div class="note">*Примечание касательно страховки</div>
+                                            <div class="note">*{{__('page.calculate.88')}}</div>
 
                                             <a href="#accordion" class="calculate">{{__('page.calculate.1')}}</a>
 
@@ -177,7 +177,7 @@
                                         <div class="card-body">
                                             <p class="description">{{$rate->getDescription()}}</p>
                                             <ul class="parameter-list">
-                                                <li class="parameter-item"><b class="title">Депозит:</b> От {{$rate->min_amount}}
+                                                <li class="parameter-item"><b class="title">Депозит:</b> От {{$rate->getMinAmount()}}
                                                 </li>
                                                 <li class="parameter-item"><b class="title">Ставка:</b> {{$rate->percent_per_day}}% в день</li>
                                                 <li class="parameter-item"><b class="title">Период:</b> {{$rate->days}} дней</li>
@@ -186,7 +186,7 @@
                                                         инвестиции</b>
                                                 </li>
                                             </ul>
-                                            <div class="note">*Примечание касательно страховки</div>
+                                            <div class="note">*{{__('page.calculate.88')}}</div>
 
                                             <a href="#accordion" class="calculate">{{__('page.calculate.1')}}</a>
 
@@ -207,11 +207,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
+                <a href="#" style="width: 250px;" class=" sponsors-item"><img src="{{asset('img/visa.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/mastercard.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>

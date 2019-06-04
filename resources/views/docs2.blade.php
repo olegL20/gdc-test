@@ -4,17 +4,15 @@
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
-                    ДОКУМЕНТАЛЬНАЯ БАЗА
+                    {{strtoupper(__('menu.docs'))}}
                 </h1>
                 <div class="col-12 col-xl-10 heading-description">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                        labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
                 </div>
                 @if (auth()->guest())
                     <div class="users-block">
-                        <a href="{{route('register')}}" class="btn register">РЕГИСТРАЦИЯ</a>
-                        <a href="{{route('login')}}" class="btn login">АВТОРИЗАЦИЯ</a>
+                        <a href="{{route('register')}}" class="btn register">{{__('page.btn.1')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('page.btn.2')}}</a>
                     </div>
                 @endif
             </div>

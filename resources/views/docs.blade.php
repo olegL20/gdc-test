@@ -4,13 +4,13 @@
         <div class="container">
             <div class="heading-text">
                 <h1 class="heading-title">
-                    ДОКУМЕНТАЛЬНАЯ БАЗА
+                    {{strtoupper(__('menu.docs'))}}
                 </h1>
 
                 @if (auth()->guest())
                     <div class="users-block">
-                        <a href="{{route('register')}}" class="btn register">{{__('auth.Register')}}</a>
-                        <a href="{{route('login')}}" class="btn login">{{__('auth.signin')}}</a>
+                        <a href="{{route('register')}}" class="btn register">{{__('page.btn.1')}}</a>
+                        <a href="{{route('login')}}" class="btn login">{{__('page.btn.2')}}</a>
                     </div>
                 @endif
             </div>
@@ -37,7 +37,7 @@
 
 
                             </div>
-                            <a href="{{route('docsII')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="{{route('docsII')}}" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -51,7 +51,7 @@
 
 
                             </div>
-                            <a href="{{route('docsCPI')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="{{route('docsCPI')}}" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -65,7 +65,7 @@
 
 
                             </div>
-                            <a href="{{route('docsCCCL')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="{{route('docsCCCL')}}" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
@@ -79,28 +79,28 @@
 
 
                             </div>
-                            <a href="{{route('docsGBSRO')}}" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="{{route('docsGBSRO')}}" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/usa.svg')}}" alt="" class="title-img">
-                                <div class="title-text">США</div>
+                                <div class="title-text">{{__('page.docs.usa')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Articles of incorporation (UBI Number: 604 352 703)</p>
 
 
                             </div>
-                            <a href="https://ccfs.sos.wa.gov/#/" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://ccfs.sos.wa.gov/#/" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/england.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Англия</div>
+                                <div class="title-text">{{__('page.docs.england')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate of incorporation of a Private Limited Company (Company Number
@@ -109,14 +109,14 @@
 
                             </div>
                             <a href="https://beta.companieshouse.gov.uk/company/11660684"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/scotland.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Шотландия</div>
+                                <div class="title-text">{{__('page.docs.scotland')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate of incorporation of a Private Limited Company (Company Number 612725)</p>
@@ -124,14 +124,14 @@
 
                             </div>
                             <a href="https://beta.companieshouse.gov.uk/company/SC612725"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/wales.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Уэльс</div>
+                                <div class="title-text">{{__('page.docs.wels')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate of incorporation of a Private Limited Company (Company Number
@@ -140,14 +140,14 @@
 
                             </div>
                             <a href="https://beta.companieshouse.gov.uk/company/11661561"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/ireland.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Северная Ирландия</div>
+                                <div class="title-text">{{__('page.docs.north')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate of incorporation of a Private Limited Company (Company Number
@@ -156,14 +156,14 @@
 
                             </div>
                             <a href="https://beta.companieshouse.gov.uk/company/NI656848"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/australia.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Австралия</div>
+                                <div class="title-text">{{__('page.docs.australia')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate of Registration of a Company (Company Number 629 835 365)</p>
@@ -171,14 +171,14 @@
 
                             </div>
                             <a href="https://connectonline.asic.gov.au/RegistrySearch/faces/landing/SearchRegisters.jspx?_adf.ctrl-state=fsi7zufvn_18"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/canada.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Канада</div>
+                                <div class="title-text">{{__('page.docs.canada')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate (Company Number 281184390)</p>
@@ -186,15 +186,14 @@
 
                             </div>
                             <a href="https://www.ic.gc.ca/app/ccc/srch/"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/new_zealand.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Новая
-                                    Зеландия
+                                <div class="title-text">{{__('page.docs.new_z')}}
                                 </div>
                             </div>
                             <div class="item-description">
@@ -203,35 +202,35 @@
 
                             </div>
                             <a href="https://companies-register.companiesoffice.govt.nz/"
-                                class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                                class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/uar.svg')}}" alt="" class="title-img">
-                                <div class="title-text">ЮАР</div>
+                                <div class="title-text">{{__('page.docs.uar')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate (Registration Number 2018 / 618210 / 07)</p>
 
 
                             </div>
-                            <a href="http://www.cipc.co.za/za/" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="http://www.cipc.co.za/za/" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
                     <li class="col-12 col-md-6 col-xxl-3 base-item">
                         <div class="item-container">
                             <div class="item-title">
                                 <img src="{{asset('img/hongkong.svg')}}" alt="" class="title-img">
-                                <div class="title-text">Гонконг</div>
+                                <div class="title-text">{{__('page.docs.gong')}}</div>
                             </div>
                             <div class="item-description">
                                 <p>Certificate of Incorporation (Company Number 2768803)</p>
 
 
                             </div>
-                            <a href="https://www.icris.cr.gov.hk/csci/" class="item-check"><i class="fas fa-search"></i><span>Проверить</span></a>
+                            <a href="https://www.icris.cr.gov.hk/csci/" class="item-check"><i class="fas fa-search"></i><span>{{__('page.docs.1')}}</span></a>
                         </div>
                     </li>
 
@@ -245,11 +244,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">
+                <a href="#" style="width: 250px;" class=" sponsors-item"><img src="{{asset('img/visa.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/mastercard.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>

@@ -103,10 +103,11 @@
     <section class="light-gradient sponsors">
         <div class="container">
             <div class=" sponsors-list">  <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/visa.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/mastercard.png')}}" alt=""></a>
+                <a href="#" class=" sponsors-item"><img src="{{asset('img/pfmoney.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/payeer.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/comodo.png')}}" alt=""></a>
                 <a href="#" class=" sponsors-item"><img src="{{asset('img/qiwi.png')}}" alt=""></a>
-                <a href="#" class=" sponsors-item"><img src="{{asset('img/ddos.png')}}" alt=""></a>
             </div>
 
         </div>
